@@ -58,7 +58,7 @@ HTML
 
 CSS
 
-```css
+<pre>css
 section {
   display: flex;
   align-items: start;
@@ -88,7 +88,7 @@ h2 {
 h1:has(+ h2) {
   margin: 0 0 0.25rem 0;
 }
-```
+</pre>
 
 ### Hoe ziet het uit?
 
