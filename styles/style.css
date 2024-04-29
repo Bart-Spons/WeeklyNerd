@@ -1,0 +1,19 @@
+h1 {
+  color: royalblue;
+}
+
+body {
+  display: flex;
+  margin: 0;
+  height: 100vh;
+}
+aside {
+  width: 20%;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+main {
+  width: 80%;
+  padding: 20px;
+  background-color: #fff;
+}
