@@ -78,3 +78,8 @@ pre code {
   color: #ffffff;
   border: 0;
 }
+
+img {
+  width: 70%;
+  height: auto;
+}
