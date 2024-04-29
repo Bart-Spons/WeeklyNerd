@@ -5,7 +5,7 @@ h1 {
 body {
   display: flex;
   margin: 0;
-  height: 100vh;
+  /* height: 100vh; */
 }
 aside {
   width: 20%;
@@ -20,26 +20,25 @@ main {
 
 /* GitHub CSS-stijl voor codeblokken */
 pre {
-    display: block;
-    padding: 16px;
-    margin: 0 0 16px;
-    font-size: 85%;
-    line-height: 1.45;
-    border-radius: 3px;
-    overflow: auto;
-    word-wrap: normal;
-    background-color: #f6f8fa;
-    border: 1px solid #d1d5da;
-  }
-  
-  pre code {
-    font-size: 100%;
-    padding: 0;
-    margin: 0;
-    overflow: visible;
-    line-height: inherit;
-    word-wrap: normal;
-    background-color: transparent;
-    border: 0;
-  }
-  
+  display: block;
+  padding: 16px;
+  margin: 0 0 16px;
+  font-size: 85%;
+  line-height: 1.45;
+  border-radius: 3px;
+  overflow: auto;
+  word-wrap: normal;
+  background-color: #f6f8fa;
+  border: 1px solid #d1d5da;
+}
+
+pre code {
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
