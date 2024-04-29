@@ -51,6 +51,10 @@ async function main() {
     });
 
     // Add event listeners for other weeks as needed
+    document.getElementById('loadWeek2').addEventListener('click', function (e) {
+        e.preventDefault();
+        loadWeekMarkdown(2);
+    });
 }
 
 main().then(() => console.log("live"));
