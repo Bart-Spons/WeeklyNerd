@@ -55,6 +55,31 @@ async function main() {
         e.preventDefault();
         loadWeekMarkdown(2);
     });
+
+    document.getElementById('loadWeek3').addEventListener('click', function (e) {
+        e.preventDefault();
+        loadWeekMarkdown(3);
+    });
+
+    document.getElementById('loadWeek4').addEventListener('click', function (e) {
+        e.preventDefault();
+        loadWeekMarkdown(4);
+    });
+
+    document.getElementById('loadWeek5').addEventListener('click', function (e) {
+        e.preventDefault();
+        loadWeekMarkdown(5);
+    });
+
+    document.getElementById('loadWeek6').addEventListener('click', function (e) {
+        e.preventDefault();
+        loadWeekMarkdown(6);
+    });
+
+    document.getElementById('loadWeek7').addEventListener('click', function (e) {
+        e.preventDefault();
+        loadWeekMarkdown(7);
+    });
 }
 
 main().then(() => console.log("live"));
