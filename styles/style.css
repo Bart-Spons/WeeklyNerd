@@ -102,6 +102,12 @@ aside {
   margin: 0em 1em 0em 0em;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  display: flex;
+}
+
+aside a {
+  margin-bottom: 1em;
 }
 
 main {
@@ -115,7 +121,6 @@ main {
 }
 
 /* Additional styles remain the same */
-
 /* Links */
 a {
   color: #4caf50;
@@ -124,7 +129,7 @@ a {
 }
 
 a:hover {
-  color: #388e3c;
+  color: #263238;
 }
 
 /* Knoppen */
