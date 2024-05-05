@@ -125,7 +125,6 @@ Ik vond het verhaal van Kilian enorm sterk. Ik kan me heel goed vinden in het ve
 
 ![polypane](./images/polypane.png)
 
-<!-- 
-<p>
+
 <img width="693" alt="image" src="./images/polypane.png">
-</p> -->
+
