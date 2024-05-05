@@ -1,8 +1,16 @@
 /* Algemene opmaak */
 
+@font-face {
+  font-family: "FilsonProRegular";
+  src: url("/fonts/filson-pro/FilsonProRegular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Algemene opmaak */
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: "FilsonProRegular", sans-serif;
   margin: 0 0 1em 0;
   padding: 0;
   background-color: #f2f2f2;
