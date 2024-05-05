@@ -157,7 +157,7 @@ pre {
   border-radius: 5px;
   overflow: auto;
   word-wrap: normal;
-  background-color: #263238;
+  background-color: rgba(142, 150, 170, 0.14);
   color: #ffffff;
 }
 
@@ -169,7 +169,7 @@ pre code {
   line-height: inherit;
   word-wrap: normal;
   background-color: transparent;
-  color: #ffffff;
+  color: black;
   border: 0;
 }
 

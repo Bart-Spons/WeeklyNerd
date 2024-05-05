@@ -80,6 +80,8 @@ async function main() {
         e.preventDefault();
         loadWeekMarkdown(7);
     });
+
+    
 }
 
 main().then(() => console.log("live"));
