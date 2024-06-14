@@ -237,17 +237,17 @@
         }
 
         html[data-theme='dark'] h3 {
-            color: var (--darkSectionColor);
+            color: var(--darkSectionColor);
         }
 
         p {
             font-size: 1.2em;
-            color: var (--lightColor);
+            color: var(--lightColor);
         }
 
         html[data-theme='dark'] p {
-            /* color: var (--darkColor); */
-            color: white;
+            color: var(--darkColor);
+            /* color: white; */
         }
 
         ul {
@@ -264,7 +264,7 @@
         }
 
         html[data-theme='dark'] a {
-            color: var (--darkSectionColor);
+            color: var(--darkSectionColor);
         }
 
         .hackathon-section {
@@ -285,8 +285,8 @@
         }
 
         html[data-theme='dark'] .hackathon-block {
-            background: var (--darkSectionBg);
-            color: var (--darkColor);
+            background: var(--darkSectionBg);
+            color: var(--darkColor);
         }
 
         .live-example {
@@ -322,19 +322,19 @@
         }
 
         html[data-theme='dark'] .progress-bar {
-            background: var (--darkSectionColor);
+            background: var(--darkSectionColor);
         }
 
         .progress-label {
-            color: var (--lightHighlightColor);
+            color: var(--lightHighlightColor);
         }
 
         html[data-theme='dark'] .progress-label {
-            color: var (--darkSectionColor);
+            color: var(--darkSectionColor);
         }
 
         html[data-theme='dark'] #test-screen, html[data-theme='dark'] #test-screen2, html[data-theme='dark'] #test-screen3, html[data-theme='dark'] #test-screen4, html[data-theme='dark'] #test-screen5, html[data-theme='dark'] #test-screen6, html[data-theme='dark'] #test-screen7, html[data-theme='dark'] #test-screen8, html[data-theme='dark'] #test-screen9, html[data-theme='dark'] #test-screen10, html[data-theme='dark'] #test-screen11 {
-            color: var (--darkSectionColor);
+            color: var(--darkSectionColor);
         }
 
         #vakken {
@@ -381,7 +381,7 @@
             left: 100%;
             width: 100%;
             height: 100%;
-            background-color: var (--lightSectionBg);
+            background-color: var(--lightSectionBg);
             flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
@@ -394,7 +394,7 @@
         }
 
         html[data-theme='dark'] #test-screen, html[data-theme='dark'] #test-screen, html[data-theme='dark'] #test2-screen, html[data-theme='dark'] #test3-screen, html[data-theme='dark'] #test4-screen, html[data-theme='dark'] #test5-screen, html[data-theme='dark'] #test6-screen, html[data-theme='dark'] #test7-screen, html[data-theme='dark'] #test8-screen, html[data-theme='dark'] #test9-screen, html[data-theme='dark'] #test10-screen, html[data-theme='dark'] #test11-screen {
-            background-color: var (--darkSectionBg);
+            background-color: var(--darkSectionBg);
 
             & li {
                 color: white;
@@ -411,7 +411,7 @@
             top: 20px;
             right: 20px;
             padding: 10px 20px;
-            background-color: var (--lightHighlightColor);
+            background-color: var(--lightHighlightColor);
             color: white;
             border: none;
             border-radius: 5px;
@@ -429,7 +429,7 @@
         html[data-theme='dark'] #test9-screen button,
         html[data-theme='dark'] #test10-screen button,
         html[data-theme='dark'] #test11-screen button {
-            background-color: var (--darkSectionColor);
+            background-color: var(--darkSectionColor);
         }
 
         #test-screen button:hover, #test2-screen button:hover, #test3-screen button:hover, #test4-screen button:hover, #test5-screen button:hover, #test6-screen button:hover, #test7-screen button:hover, #test8-screen button:hover, #test9-screen button:hover, #test10-screen button:hover, #test11-screen button:hover {
@@ -440,7 +440,7 @@
             margin-top: 20px;
             align-self: center;
             padding: 10px 20px;
-            background-color: var (--lightHighlightColor);
+            background-color: var(--lightHighlightColor);
             color: white;
             border: none;
             border-radius: 5px;
@@ -448,7 +448,7 @@
         }
 
         html[data-theme='dark'] .back-button {
-            background-color: var (--darkSectionColor);
+            background-color: var(--darkSectionColor);
         }
 
         .back-button:hover {
@@ -500,7 +500,7 @@
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            background: var (--lightSectionBg);
+            background: var(--lightSectionBg);
         }
 
         .bubble {
@@ -508,7 +508,7 @@
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            background-color: var (--lightHighlightColor);
+            background-color: var(--lightHighlightColor);
             opacity: 0.7;
             transition: transform 0.3s ease;
             display: flex;
@@ -518,7 +518,7 @@
             text-align: center;
             padding: 10px;
             box-sizing: border-box;
-            color: var (--lightColor);
+            color: var(--lightColor);
         }
 
         .bubble p {
@@ -550,7 +550,7 @@
             justify-content: center;
             align-items: flex-end;
             padding: 50px 0;
-            background: var (--lightSectionBg);
+            background: var(--lightSectionBg);
         }
 
         .podium {
@@ -564,7 +564,7 @@
         }
 
         .podium div {
-            color: var (--lightColor);
+            color: var(--lightColor);
             width: 200px; /* Increased width */
             border-radius: 10px 10px 0 0;
             display: flex;
@@ -1057,6 +1057,40 @@
             </div> -->
         </div>
     </section>
+
+    <div id="test-screen">
+        <h2>Weekly Nerd Week 1</h2>
+    </div>
+    <div id="test2-screen">
+        <h2>Weekly Nerd Week 2</h2>
+    </div>
+    <div id="test3-screen">
+        <h2>Weekly Nerd Week 3</h2>
+    </div>
+    <div id="test4-screen">
+        <h2>Weekly Nerd Week 4</h2>
+    </div>
+    <div id="test5-screen">
+        <h2>Weekly Nerd Week 5</h2>
+    </div>
+    <div id="test6-screen">
+        <h2>Weekly Nerd Week 6</h2>
+    </div>
+    <div id="test7-screen">
+        <h2>Weekly Nerd Week 7</h2>
+    </div>
+    <div id="test8-screen">
+        <h2>Weekly Nerd Week 8</h2>
+    </div>
+    <div id="test9-screen">
+        <h2>Weekly Nerd Week 9</h2>
+    </div>
+    <div id="test10-screen">
+        <h2>Weekly Nerd Week 10</h2>
+    </div>
+    <div id="test11-screen">
+        <h2>Weekly Nerd Week 11</h2>
+    </div>
 
     <footer>© 2024 Minor Web</footer>
 
