@@ -1,45 +1,48 @@
+# Weekly Nerd 7
 
-## Spreker
+## Gastspreker: Rosa Schuurmans
 
-Rosa Schuurmans
-- Rol: UX Designer, (React) Developer
+## Achtergrond
+Rosa Schuurmans is een veelzijdige professional met een sterke achtergrond in zowel UX design als (React) development. Ze heeft een passie voor het combineren van creativiteit met techniek, wat duidelijk naar voren kwam in haar presentatie getiteld "Creative Coding".
 
-## In het kort
+## Onderwerpen
 
-Rosa Schuurmans combineert haar vaardigheden in UX design en React ontwikkeling met een passie voor 'creative coding'. Ze is actief betrokken bij het 'circuit bending' van bestaande technologieën en frameworks om nieuwe, speelse toepassingen te creëren.
+## Creative Coding
+Tijdens haar gastles sprak Rosa uitgebreid over "Creative Coding", een concept dat de grenzen van traditionele programmeerpraktijken verlegt door een focus op creativiteit en expressie.
 
-## Creative Coding en Circuit Bending
+## Circuit Bending
+Een ander fascinerend onderwerp dat Rosa besprak was "Circuit Bending". Deze Engelse term verwijst naar het ombuigen of aanpassen van bestaande frameworks en elektronische apparaten om nieuwe en vaak onverwachte resultaten te bereiken. Dit proces benadrukt het belang van experimentatie en speelt in op de speelse kant van technologie.
 
-Rosa past 'circuit bending' toe om bestaande elektronische apparaten en frameworks op een creatieve manier te hergebruiken en aan te passen, wat vaak leidt tot innovatieve en unieke projecten.
+### ToysR'us Studios Sound
+Rosa toonde ook een foto van een project genaamd ToysR'us Studios Sound, waar ze bestaande speelgoedapparaten heeft omgebouwd om unieke geluiden te creëren. Dit project illustreerde de creatieve mogelijkheden van circuit bending in een toegankelijke en inspirerende context.
 
-### ToysR'Us Studios Sound
+## Gastles op Grafisch Lyceum
+Rosa gaf een gastles op het Grafisch Lyceum, waarbij ze haar ervaringen en kennis deelde met studenten van de opleiding Software Engineering. Haar doel was om technologie leuker te maken en studenten aan te moedigen om te spelen met verschillende technische tools, zoals Arduino. 
 
-Rosa heeft gewerkt aan projecten zoals het geluid voor ToysR'Us Studios, waarbij ze bestaande geluidssystemen manipuleert voor creatieve outputs.
+## Workshops
+Daarnaast organiseert Rosa workshops waarin ze deelnemers begeleidt bij het verkennen van technologie op een speelse manier. Deze workshops zijn ontworpen om mensen aan te moedigen nieuwe vaardigheden te leren en hun creativiteit te uiten door middel van techniek.
 
-### Gastles op het Grafisch Lyceum
-
-Als gastdocent bij het Grafisch Lyceum heeft Rosa workshops gegeven in software engineering, waarbij ze studenten aanmoedigde om met technologie te spelen, zoals door het gebruik van Arduino kits.
+## Innovatieve Projecten
 
 ## PostmarketOS
+Een van de meest intrigerende projecten die Rosa besprak was het gebruik van postmarketOS, een Linux-distributie voor oude mobiele telefoons. Ze besprak de mogelijkheid om een oude mobiel te gebruiken als webserver, wat een kosteneffectieve en milieuvriendelijke manier is om oude apparaten nieuw leven in te blazen.
 
-Rosa is ook betrokken bij het postmarketOS project, een initiatief om Linux te draaien op oudere mobiele telefoons, mogelijk zelfs als een webserver.
+## Status-quo Uitdagen
+Rosa benadrukte het belang van het niet altijd accepteren van de status-quo. Ze moedigde de studenten aan om buiten de gebaande paden te denken en innovatieve oplossingen te zoeken voor technische uitdagingen.
 
-## Alternatieve Game Development
+## GameMaker Studio
+In plaats van de populaire Unity-engine te gebruiken, sprak Rosa over het gebruik van GameMaker Studio voor het maken van games. Dit platform biedt een toegankelijke manier voor beginners om in de wereld van gameontwikkeling te stappen.
 
-In plaats van traditionele platforms zoals Unity, gebruikt Rosa Gamemaker Studio voor het ontwikkelen van games, wat een alternatieve aanpak biedt.
+## Muziek maken met PureData
+Rosa's creatieve talenten strekken zich ook uit tot het maken van muziek. Ze gebruikt PureData, een visuele programmeertaal voor audio, om unieke muzikale composities te creëren.
 
-## Muziek Creatie
+## Advies aan Studenten
+Rosa sloot haar presentatie af met waardevol advies voor de studenten: "Omring jezelf met mensen die je inspireren en bedrijven waarvan je vindt dat ze interessante dingen doen. Loop daar stage." Dit benadrukt het belang van een inspirerende omgeving en praktische ervaring in het leren en groeien als professional.
 
-Voor het maken van muziek gebruikt Rosa PureData, een visuele programmeertaal die speciaal is ontwikkeld voor het creëren van interactieve computer muziek en multimedia werken.
-
-## Inspiratie en Loopbaanadvies
-
-Rosa benadrukt het belang van het omringen met inspirerende mensen en adviseert stagiaires om te kiezen voor bedrijven die aansluiten bij hun waarden en interesses.
-
-## Nuttige Link
-
-- [Creative Coding Utrecht](https://creativecodingutrecht.nl/nl) - Een website die Rosa inspireert en aanbeveelt.
+## Aanvullende Informatie
+Voor meer informatie over creatieve codering en Rosa's werk, kun je de website [Creative Coding Utrecht](https://creativecodingutrecht.nl/nl) bezoeken. Dit is een mooie bron voor iedereen die geïnteresseerd is in de kruising van creativiteit en technologie.
 
 ## Conclusie
+De gastles van Rosa Schuurmans was zowel inspirerend als informatief. Ze deelde haar unieke benadering van technologie en creativiteit en moedigde studenten aan om speelsheid en experimentatie te omarmen in hun leerproces.
 
-Rosa Schuurmans daagt de status-quo uit en stimuleert anderen om technologie op een speelse en creatieve manier te benaderen. Haar werk in 'creative coding' en educatie illustreert haar toewijding aan innovatie en het delen van kennis.
+
