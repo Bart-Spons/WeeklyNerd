@@ -13,10 +13,10 @@ Marieke, een oud student die stage liep bij Active Collective, en Pim, medeopric
 ### Wie wordt er graag buitengesloten?
 
 Niemand wil graag buitengesloten worden, maar het gebeurt vaak onbedoeld door beperkte toegankelijkheid in digitale content. Situaties zoals:
-- Je luistert muziek terwijl je op TikTok of Instagram zit en leest daarom de ondertitels.
-- Door de zon kun je je mobiel niet zien en moet je ergens anders gaan zitten.
-- Tijdelijke beperkingen door medicijnen of blessures.
-- Mensen met een permanente beperking.
+**Je luistert muziek terwijl je op TikTok of Instagram zit en leest daarom de ondertitels.**
+**Door de zon kun je je mobiel niet zien en moet je ergens anders gaan zitten.**
+**Tijdelijke beperkingen door medicijnen of blessures.**
+**Mensen met een permanente beperking.**
 
 ### Wat is digitale toegankelijkheid?
 
