@@ -6,20 +6,18 @@
     <title>Mijn Blog</title>
     <style>
        :root {
-    --lightBtn: #66d9ef;
-    --darkBtn: #6a5acd; /* Slate Blue */
-    --lightBg: #f2f2f2;
-    --darkBg: #1c1c1c; /* Very Dark Gray */
-    --lightColor: #272822;
-    --darkColor: #ecf0f1; /* Light Gray */
-    --lightSectionBg: #f2f2f2;
-    --darkSectionBg: #2a2a2a; /* Dark Gray */
-    --lightSectionColor: #272822;
-    --darkSectionColor: #27ae60; /* Nephritis */
-    --lightHighlightColor: #0366d6; /* Light mode highlight color */
-}
-
-
+            --lightBtn: #66d9ef;
+            --darkBtn: #6a5acd; /* Slate Blue */
+            --lightBg: #f2f2f2;
+            --darkBg: #1c1c1c; /* Very Dark Gray */
+            --lightColor: #272822;
+            --darkColor: #ecf0f1; /* Light Gray */
+            --lightSectionBg: #f2f2f2;
+            --darkSectionBg: #2a2a2a; /* Dark Gray */
+            --lightSectionColor: #272822;
+            --darkSectionColor: #27ae60; /* Nephritis */
+            --lightHighlightColor: #0366d6; /* Light mode highlight color */
+        }
 
         html {
             background: var(--lightBg);
@@ -239,16 +237,16 @@
         }
 
         html[data-theme='dark'] h3 {
-            color: var(--darkSectionColor);
+            color: var (--darkSectionColor);
         }
 
         p {
             font-size: 1.2em;
-            color: var(--lightColor);
+            color: var (--lightColor);
         }
 
         html[data-theme='dark'] p {
-            color: var(--darkColor);
+            color: var (--darkColor);
         }
 
         ul {
@@ -265,7 +263,7 @@
         }
 
         html[data-theme='dark'] a {
-            color: var(--darkSectionColor);
+            color: var (--darkSectionColor);
         }
 
         .hackathon-section {
@@ -286,8 +284,8 @@
         }
 
         html[data-theme='dark'] .hackathon-block {
-            background: var(--darkSectionBg);
-            color: var(--darkColor);
+            background: var (--darkSectionBg);
+            color: var (--darkColor);
         }
 
         .live-example {
@@ -323,19 +321,19 @@
         }
 
         html[data-theme='dark'] .progress-bar {
-            background: var(--darkSectionColor);
+            background: var (--darkSectionColor);
         }
 
         .progress-label {
-            color: var(--lightHighlightColor);
+            color: var (--lightHighlightColor);
         }
 
         html[data-theme='dark'] .progress-label {
-            color: var(--darkSectionColor);
+            color: var (--darkSectionColor);
         }
 
         html[data-theme='dark'] #test-screen, html[data-theme='dark'] #test-screen2, html[data-theme='dark'] #test-screen3, html[data-theme='dark'] #test-screen4, html[data-theme='dark'] #test-screen5, html[data-theme='dark'] #test-screen6, html[data-theme='dark'] #test-screen7, html[data-theme='dark'] #test-screen8, html[data-theme='dark'] #test-screen9, html[data-theme='dark'] #test-screen10, html[data-theme='dark'] #test-screen11 {
-            color: var(--darkSectionColor);
+            color: var (--darkSectionColor);
         }
 
         #vakken {
@@ -343,7 +341,10 @@
             padding: 50px 0;
         }
 
-        #vakken2 > .gallery-container{
+        #vakken2 .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             margin: 0;
         }
 
@@ -379,7 +380,7 @@
             left: 100%;
             width: 100%;
             height: 100%;
-            background-color: var(--lightSectionBg);
+            background-color: var (--lightSectionBg);
             flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
@@ -392,24 +393,24 @@
         }
 
         html[data-theme='dark'] #test-screen, html[data-theme='dark'] #test-screen, html[data-theme='dark'] #test2-screen, html[data-theme='dark'] #test3-screen, html[data-theme='dark'] #test4-screen, html[data-theme='dark'] #test5-screen, html[data-theme='dark'] #test6-screen, html[data-theme='dark'] #test7-screen, html[data-theme='dark'] #test8-screen, html[data-theme='dark'] #test9-screen, html[data-theme='dark'] #test10-screen, html[data-theme='dark'] #test11-screen {
-            background-color: var(--darkSectionBg);
+            background-color: var (--darkSectionBg);
 
-            & li{
+            & li {
                 color: white;
             }
         }
 
-        #test-screen.active, #test2-screen.active, #test3-screen.active, #test4-screen.active, #test5-screen.active, #test6-screen.active, #test7-screen.active, #test8-screen.active, #test9-screen.active, #test10-screen.active, #test11-screen.active{
+        #test-screen.active, #test2-screen.active, #test3-screen.active, #test4-screen.active, #test5-screen.active, #test6-screen.active, #test7-screen.active, #test8-screen.active, #test9-screen.active, #test10-screen.active, #test11-screen.active {
             display: flex;
             transform: translateX(-100%);
         }
 
-        #test-screen button, #test2-screen button, #test3-screen button, #test4-screen button, #test5-screen button, #test6-screen button, #test7-screen button, #test8-screen button, #test9-screen button, #test10-screen button, #test11-screen button{
+        #test-screen button, #test2-screen button, #test3-screen button, #test4-screen button, #test5-screen button, #test6-screen button, #test7-screen button, #test8-screen button, #test9-screen button, #test10-screen button, #test11-screen button {
             position: absolute;
             top: 20px;
             right: 20px;
             padding: 10px 20px;
-            background-color: var(--lightHighlightColor);
+            background-color: var (--lightHighlightColor);
             color: white;
             border: none;
             border-radius: 5px;
@@ -427,8 +428,7 @@
         html[data-theme='dark'] #test9-screen button,
         html[data-theme='dark'] #test10-screen button,
         html[data-theme='dark'] #test11-screen button {
-
-            background-color: var(--darkSectionColor);
+            background-color: var (--darkSectionColor);
         }
 
         #test-screen button:hover, #test2-screen button:hover, #test3-screen button:hover, #test4-screen button:hover, #test5-screen button:hover, #test6-screen button:hover, #test7-screen button:hover, #test8-screen button:hover, #test9-screen button:hover, #test10-screen button:hover, #test11-screen button:hover {
@@ -439,7 +439,7 @@
             margin-top: 20px;
             align-self: center;
             padding: 10px 20px;
-            background-color: var(--lightHighlightColor);
+            background-color: var (--lightHighlightColor);
             color: white;
             border: none;
             border-radius: 5px;
@@ -447,7 +447,7 @@
         }
 
         html[data-theme='dark'] .back-button {
-            background-color: var(--darkSectionColor);
+            background-color: var (--darkSectionColor);
         }
 
         .back-button:hover {
@@ -492,164 +492,159 @@
         }
 
         #vakkenReflectie {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    background: var(--lightSectionBg);
-}
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            background: var (--lightSectionBg);
+        }
 
-.bubble {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: var(--lightHighlightColor);
-    opacity: 0.7;
-    transition: transform 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-    box-sizing: border-box;
-    color: var(--lightColor);
-}
+        .bubble {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: var (--lightHighlightColor);
+            opacity: 0.7;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+            color: var (--lightColor);
+        }
 
-.bubble p {
-    margin: 0;
-    padding: 0;
-}
+        .bubble p {
+            margin: 0;
+            padding: 0;
+        }
 
-.bubble:hover {
-    transform: scale(1.2);
-}
+        .bubble:hover {
+            transform: scale(1.2);
+        }
 
-@keyframes move {
-    0%, 100% {
-        transform: translateY(0) translateX(0);
-    }
-    25% {
-        transform: translateY(-30px) translateX(10px);
-    }
-    50% {
-        transform: translateY(-15px) translateX(-10px);
-    }
-    75% {
-        transform: translateY(20px) translateX(5px);
-    }
-}
+        @keyframes move {
+            0%, 100% {
+                transform: translateY(0) translateX(0);
+            }
+            25% {
+                transform: translateY(-30px) translateX(10px);
+            }
+            50% {
+                transform: translateY(-15px) translateX(-10px);
+            }
+            75% {
+                transform: translateY(20px) translateX(5px);
+            }
+        }
 
-#besteNerds {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    padding: 50px 0;
-    background: var(--lightSectionBg);
-}
+        #besteNerds {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding: 50px 0;
+            background: var (--lightSectionBg);
+        }
 
-.podium {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+        .podium {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-.podium div {
-    color: var(--lightColor);
-    width: 200px; /* Increased width */
-    border-radius: 10px 10px 0 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 0 20px;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: center;
-    position: relative;
-    transition: transform 0.3s ease, background 0.3s ease;
-}
+        .podium div {
+            color: var (--lightColor);
+            width: 200px; /* Increased width */
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            margin: 0 20px;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
 
-.podium .first-place {
-    height: 350px;
-    background: #ffd700; /* Gold color */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
+        .podium .first-place {
+            height: 350px;
+            background: #ffd700; /* Gold color */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
 
-.podium .second-place {
-    height: 300px;
-    background: #c0c0c0; /* Silver color */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
+        .podium .second-place {
+            height: 300px;
+            background: #c0c0c0; /* Silver color */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
 
-.podium .third-place {
-    height: 280px;
-    background: #cd7f32; /* Bronze color */
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-}
+        .podium .third-place {
+            height: 280px;
+            background: #cd7f32; /* Bronze color */
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
 
-.podium div:hover {
-    transform: scale(1.1);
-}
+        .podium div:hover {
+            transform: scale(1.1);
+        }
 
-.podium div h4 {
-    margin: 0 0 10px;
-}
+        .podium div h4 {
+            margin: 0 0 10px;
+        }
 
-.podium div p {
-    margin: 0;
-}
+        .podium div p {
+            margin: 0;
+        }
 
-.speech-bubble {
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 350px; /* Increased width */
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    font-size: 1em;
-    z-index: 10;
-}
+        .speech-bubble {
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 350px; /* Increased width */
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            font-size: 1em;
+            z-index: 10;
+        }
 
-.podium div:hover .speech-bubble {
-    visibility: visible;
-    opacity: 1;
-}
+        .podium div:hover .speech-bubble {
+            visibility: visible;
+            opacity: 1;
+        }
 
-.speech-bubble::after {
-    content: '';
-    position: absolute;
-    bottom: -20px; /* Height of the triangle */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-top: 20px solid white;
-}
-
-
-
-
+        .speech-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -20px; /* Height of the triangle */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 20px solid white;
+        }
 
         html[data-theme='dark'] pre {
-            /* background: var(--darkSectionBg); */
             color: black;
         }
 
@@ -693,6 +688,45 @@
             p {
                 font-size: 1em;
             }
+
+            .gallery-container {
+                /* flex-direction: column; */
+                /* align-items: center; */
+            }
+
+            #besteNerds .podium {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #besteNerds .podium div {
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+            }
+
+            .podium .first-place,
+            .podium .second-place,
+            .podium .third-place {
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+            }
+
+            #vakkenReflectie {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .bubble {
+                width: 150px;
+                height: 150px;
+                margin-bottom: 20px;
+            }
+
+            .speech-bubble {
+                width: 250px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -723,6 +757,45 @@
 
             p {
                 font-size: 0.8em;
+            }
+
+            .gallery-container {
+                /* flex-direction: column; */
+                /* align-items: center; */
+            }
+
+            #besteNerds .podium {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #besteNerds .podium div {
+                width: 100%;
+                max-width: 200px;
+                height: auto;
+            }
+
+            .podium .first-place,
+            .podium .second-place,
+            .podium .third-place {
+                width: 100%;
+                max-width: 200px;
+                height: auto;
+            }
+
+            #vakkenReflectie {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .bubble {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 20px;
+            }
+
+            .speech-bubble {
+                width: 200px;
             }
         }
     </style>
@@ -919,10 +992,9 @@
 
             <h3>Leerdoelen</h3>
             <p>Ik heb mijn leerdoelen behaald. Ik heb veel geleerd. Niet alleen over code maar ook over secuur werken. Elke pull request met aandachtig nagekeken door mijn teamgenoten. </p>
-
-
-            </div>
+        </div>
     </section>
+
     <section id="besteNerds">
         <div class="content-wrapper">
             <h2>Weekly Nerds</h2>
@@ -951,88 +1023,39 @@
             </div>
         </div>
     </section>
-    
-    
-    
 
-    
-
-            <section id="vakkenReflectie">
-                <div class="content-wrapper">
-
-
-            <!-- <div>
-            <p>WAFS</p>
-            <p>Leuk voor de docenten om iedereen zijn niveau te bepalen.</p>
-        </div>
-
-        <div>
-            <p>CSS</p>
-            <p>Zeer leerzaam</p>
-        </div>
-
-        <div>
-            <p>Browser Technologies</p>
-            <p>Voortaan even info geven over PPK</p>
-        </div>
-
-        <div>
-            <p>Hackaton</p>
-            <p>Top, CSS day is geweldig</p>
-        </div>
-
-    <div>
-            <p>UCD</p>
-            <p>Top</p>
-        </div>
-
-            <div>
-            <p>API</p>
-            <p>Leuk maar moet het zelf moeilijk maken</p>
-        </div>
-
-            <div>
-            <p>Meesterproef</p>
-            <p>Knallend einde</p>
-        </div> -->
-
+    <section id="vakkenReflectie">
+        <div class="content-wrapper">
+            <!-- <div class="bubble">
+                <p><strong>WAFS</strong></p>
+                <p>Leuk voor de docenten om iedereen zijn niveau te bepalen.</p>
+            </div>
+            <div class="bubble">
+                <p><strong>CSS</strong></p>
+                <p>Maak wat je wil, altijd leuk!</p>
+            </div>
+            <div class="bubble">
+                <p><strong>Browser Technologies</strong></p>
+                <p>PPK werd soms belachelijk gemaakt, vertel van tevoren wie hij is</p>
+            </div>
+            <div class="bubble">
+                <p><strong>Hackaton</strong></p>
+                <p>Top, CSS day is geweldig (meer tickets vrijmaken)</p>
+            </div>
+            <div class="bubble">
+                <p><strong>UCD</strong></p>
+                <p>Werken met een echte doelgroep!</p>
+            </div>
+            <div class="bubble">
+                <p><strong>API</strong></p>
+                <p>Leuk maar moet het zelf moeilijk maken</p>
+            </div>
+            <div class="bubble">
+                <p><strong>Meesterproef</strong></p>
+                <p>Knallend einde van een geweldige minor!</p>
+            </div> -->
         </div>
     </section>
-
-    
-    <div id="test-screen">
-        <h2>Weekly Nerd Week 1</h2>
-    </div>
-    <div id="test2-screen">
-        <h2>Weekly Nerd Week 2</h2>
-    </div>
-    <div id="test3-screen">
-        <h2>Weekly Nerd Week 3</h2>
-    </div>
-    <div id="test4-screen">
-        <h2>Weekly Nerd Week 4</h2>
-    </div>
-    <div id="test5-screen">
-        <h2>Weekly Nerd Week 5</h2>
-    </div>
-    <div id="test6-screen">
-        <h2>Weekly Nerd Week 6</h2>
-    </div>
-    <div id="test7-screen">
-        <h2>Weekly Nerd Week 7</h2>
-    </div>
-    <div id="test8-screen">
-        <h2>Weekly Nerd Week 8</h2>
-    </div>
-    <div id="test9-screen">
-        <h2>Weekly Nerd Week 9</h2>
-    </div>
-    <div id="test10-screen">
-        <h2>Weekly Nerd Week 10</h2>
-    </div>
-    <div id="test11-screen">
-        <h2>Weekly Nerd Week 11</h2>
-    </div>
 
     <footer>© 2024 Minor Web</footer>
 
@@ -1284,29 +1307,29 @@
         };
 
         document.addEventListener("DOMContentLoaded", function() {
-        const container = document.getElementById("vakkenReflectie");
-        const bubbles = [
-            { title: "WAFS", text: "Leuk voor de docenten om iedereen zijn niveau te bepalen." },
-            { title: "CSS", text: "Maak wat je wil, altijd leuk!" },
-            { title: "Browser Technologies", text: "PPK werd soms belachelijk gemaakt, vertel van tevoren wie hij is" },
-            { title: "Hackaton", text: "Top, CSS day is geweldig (meer tickets vrijmaken)" },
-            { title: "UCD", text: "Werken met een echte doelgroep!" },
-            { title: "API", text: "Leuk maar moet het zelf moeilijk maken" },
-            { title: "Meesterproef", text: "Knallend einde van een geweldige minor!" }
-        ];
-        const colors = ['#66d9ef', '#ae81ff', '#a6e22e', '#f92672', '#fd971f'];
+            const container = document.getElementById("vakkenReflectie");
+            const bubbles = [
+                { title: "WAFS", text: "Leuk voor de docenten om iedereen zijn niveau te bepalen." },
+                { title: "CSS", text: "Maak wat je wil, altijd leuk!" },
+                { title: "Browser Technologies", text: "PPK werd soms belachelijk gemaakt, vertel van tevoren wie hij is" },
+                { title: "Hackaton", text: "Top, CSS day is geweldig (meer tickets vrijmaken)" },
+                { title: "UCD", text: "Werken met een echte doelgroep!" },
+                { title: "API", text: "Leuk maar moet het zelf moeilijk maken" },
+                { title: "Meesterproef", text: "Knallend einde van een geweldige minor!" }
+            ];
+            const colors = ['#66d9ef', '#ae81ff', '#a6e22e', '#f92672', '#fd971f'];
 
-        bubbles.forEach((bubbleContent, index) => {
-            const bubble = document.createElement("div");
-            bubble.className = "bubble";
-            bubble.innerHTML = `<p><strong>${bubbleContent.title}</strong></p><p>${bubbleContent.text}</p>`;
-            bubble.style.left = `${(index % 3) * 33 + 10}%`;  // Spreading bubbles horizontally
-            bubble.style.top = `${Math.floor(index / 3) * 35 + 10}%`;  // Spreading bubbles vertically
-            bubble.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-            bubble.style.animation = `move ${Math.random() * 5 + 3}s ease-in-out infinite`;
-            container.appendChild(bubble);
+            bubbles.forEach((bubbleContent, index) => {
+                const bubble = document.createElement("div");
+                bubble.className = "bubble";
+                bubble.innerHTML = `<p><strong>${bubbleContent.title}</strong></p><p>${bubbleContent.text}</p>`;
+                bubble.style.left = `${(index % 3) * 33 + 10}%`;  // Spreading bubbles horizontally
+                bubble.style.top = `${Math.floor(index / 3) * 35 + 10}%`;  // Spreading bubbles vertically
+                bubble.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                bubble.style.animation = `move ${Math.random() * 5 + 3}s ease-in-out infinite`;
+                container.appendChild(bubble);
+            });
         });
-    });
     </script>
 </body>
 </html>
