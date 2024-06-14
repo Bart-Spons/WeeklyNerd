@@ -7,7 +7,7 @@ Robert werkt als een Creative Technologist voor het Digital Factory team bij Del
 Robert beschrijft zichzelf als een "Digital Superhero," wat in feite neerkomt op een front-end developer met diverse hobby's en vaardigheden. 
 
 ## Kernactiviteiten
-- *Front-end development**: Het bouwen van gebruikersvriendelijke interfaces.
+**Front-end development**: Het bouwen van gebruikersvriendelijke interfaces.
 - **AI**: Werken met kunstmatige intelligentie om innovatieve oplossingen te ontwikkelen.
 - **Kwalitatief onderzoek**: Het uitvoeren van onderzoek om diepgaande inzichten te verkrijgen.
 - **Stakeholder management**: Het beheren van relaties en verwachtingen van belanghebbenden.
