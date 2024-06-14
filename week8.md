@@ -20,20 +20,20 @@ Robert beschrijft zichzelf als een "Digital Superhero," wat in feite neerkomt op
 **“I love to automate everything”**: Robert heeft een passie voor het automatiseren van processen om efficiëntie te verhogen.
 
 ## Wat doe ik eigenlijk?
-<p>Robert gaf een overzicht van enkele van zijn projecten en verantwoordelijkheden binnen Deloitte.</p>
+Robert gaf een overzicht van enkele van zijn projecten en verantwoordelijkheden binnen Deloitte.
 
 ## ChatGPT binnen Deloitte
-<p>Ontwikkeling van een interne versie van ChatGPT die veilig is voor gebruik binnen Deloitte, zonder risico op datalekken.</p>
+Ontwikkeling van een interne versie van ChatGPT die veilig is voor gebruik binnen Deloitte, zonder risico op datalekken.
 
 ## Azure AI
-<p>Gebruik van Azure AI om een deepfake van de baas van Deloitte te maken, wat een geavanceerde toepassing van AI-technologie laat zien.</p>
+Gebruik van Azure AI om een deepfake van de baas van Deloitte te maken, wat een geavanceerde toepassing van AI-technologie laat zien.
 
 ## Toekomstplannen
-<p>Robert besprak ook waar hij en zijn team aan werken en wat zijn toekomstplannen zijn.</p>
+Robert besprak ook waar hij en zijn team aan werken en wat zijn toekomstplannen zijn.
 
 ## Waar gaan wij werken?
 **Wat wil ik later doen?**
-<p>Doorstuderen: Robert overweegt verdere studie om zijn kennis en vaardigheden uit te breiden.</p>
+Doorstuderen: Robert overweegt verdere studie om zijn kennis en vaardigheden uit te breiden.
 
 ## Het Landschap
 Robert benadrukte het belang van voortdurende educatie en nieuwsgierigheid in de snel veranderende technologische wereld.
