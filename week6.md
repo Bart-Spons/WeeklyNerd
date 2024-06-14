@@ -1,8 +1,8 @@
 
 ## Sprekers
 
-- **Marieke** - Onderzoeker Digitaal Toegankelijk
-- **Pim** - Medeoprichter Digitaal Toegankelijk
+**Marieke** - Onderzoeker Digitaal Toegankelijk
+**Pim** - Medeoprichter Digitaal Toegankelijk
 
 ## In het kort
 
