@@ -8,10 +8,15 @@ Robert beschrijft zichzelf als een "Digital Superhero," wat in feite neerkomt op
 
 ## Kernactiviteiten
 **Front-end development**: Het bouwen van gebruikersvriendelijke interfaces.
+
 **AI**: Werken met kunstmatige intelligentie om innovatieve oplossingen te ontwikkelen.
+
 **Kwalitatief onderzoek**: Het uitvoeren van onderzoek om diepgaande inzichten te verkrijgen.
+
 **Stakeholder management**: Het beheren van relaties en verwachtingen van belanghebbenden.
+
 **Super creatieve oplossingen**: Out-of-the-box denken om unieke en effectieve oplossingen te vinden.
+
 **“I love to automate everything”**: Robert heeft een passie voor het automatiseren van processen om efficiëntie te verhogen.
 
 ## Wat doe ik eigenlijk?
@@ -34,8 +39,11 @@ Robert besprak ook waar hij en zijn team aan werken en wat zijn toekomstplannen 
 Robert benadrukte het belang van voortdurende educatie en nieuwsgierigheid in de snel veranderende technologische wereld.
 
 **Learn fundamentals**: Begrijp de basisprincipes van technologie.
+
 **Blijf nieuwsgierig**: Houd een nieuwsgierige houding aan om nieuwe ontwikkelingen te verkennen.
+
 **Blijf geïnformeerd**: Blijf op de hoogte van de laatste trends en technologieën.
+
 **Leuk vinden om nieuwe dingen te leren**: Vind plezier in het constant leren en ontdekken van nieuwe dingen.
 
 ## The Stack
