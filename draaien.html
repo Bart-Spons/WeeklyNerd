@@ -23,11 +23,26 @@
             background: var(--lightBg);
         }
 
+        /* filson font */
+        @font-face {
+            font-family: 'Filson';
+            src: url('./fonts/FilsonSoft-Bold.woff2') format('woff2'),
+                url('./fonts/FilsonSoft-Bold.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        /* simpsons font */
+        @font-face {
+            font-family: 'Simpsons';
+            src: url('./fonts/Simpsonsfont.otf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
         body {
             margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                Helvetica, Arial, sans-serif, "Apple Color Emoji",
-                "Segoe UI Emoji";
+            font-family: 'Simpsons';
             color: #24292e;
             line-height: 1.5;
             overflow-x: hidden;
@@ -657,7 +672,7 @@
         #gallery-bottom .gallery-container > .gallery-item {
             width: 300px;
             height: 300px;
-            background-size: cover!important;
+            background-size: contain!important;
         }
 
         @media (max-width: 768px) {
@@ -912,17 +927,16 @@
     <section id="gallery-bottom">
         <h2>Vakken</h2>
         <div class="gallery-container">
-            <div class="gallery-item" style="background: url('./images/polypane2.png') no-repeat center center;"></div>
-
-            <div class="gallery-item" style="background: url('./images/polypane2.png') no-repeat center center;"></div>
-            <div class="gallery-item" style="background: url('./images/polypane2.png') no-repeat center center;"></div>
-            <div class="gallery-item" style="background: url('./images/polypane2.png') no-repeat center center;"></div>
-            <div class="gallery-item" style="background: url('./images/polypane2.png') no-repeat center center;"></div>
-            <div class="gallery-item" style="background: url('./images/polypane2.png') no-repeat center center;"></div>
-            <div class="gallery-item" style="background: url('./images/polypane2.png') no-repeat center center;"></div>
-            <div class="gallery-item" style="background: url('./images/polypane2.png') no-repeat center center;"></div>
-            <div class="gallery-item" style="background: url('./images/polypane2.png') no-repeat center center;"></div>
-            <div class="gallery-item" style="background: url('./images/polypane2.png') no-repeat center center;"></div>
+            <div class="gallery-item" style="background: url('./font-images/nerds.png') no-repeat center center;"></div>
+            <div class="gallery-item" style="background: url('./font-images/cssday.png') no-repeat center center;"></div>
+            <div class="gallery-item" style="background: url('./font-images/css.png') no-repeat center center;"></div>
+            <div class="gallery-item" style="background: url('./font-images/bt.png') no-repeat center center;"></div>
+            <div class="gallery-item" style="background: url('./font-images/hackaton.png') no-repeat center center;"></div>
+            <div class="gallery-item" style="background: url('./font-images/ucd.png') no-repeat center center;"></div>
+            <div class="gallery-item" style="background: url('./font-images/wafs.png') no-repeat center center;"></div>
+            <div class="gallery-item" style="background: url('./font-images/api.png') no-repeat center center;"></div>
+            <div class="gallery-item" style="background: url('./font-images/meesterproef.png') no-repeat center center;"></div>
+            <div class="gallery-item" style="background: url('./font-images/sprekers.png') no-repeat center center;"></div>
         </div>
         <div class="progress-container">
             <div class="progress-label" id="progress-label-2">0 / 10</div>
