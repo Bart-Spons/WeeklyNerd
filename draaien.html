@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mijn Blog</title>
+    <style>
+       :root {
+    --lightBtn: #66d9ef;
+    --darkBtn: #6a5acd; /* Slate Blue */
+    --lightBg: #f2f2f2;
+    --darkBg: #1c1c1c; /* Very Dark Gray */
+    --lightColor: #272822;
+    --darkColor: #ecf0f1; /* Light Gray */
+    --lightSectionBg: #f2f2f2;
+    --darkSectionBg: #2a2a2a; /* Dark Gray */
+    --lightSectionColor: #272822;
+    --darkSectionColor: #27ae60; /* Nephritis */
+    --lightHighlightColor: #0366d6; /* Light mode highlight color */
+}
+
+
+
+        html {
+            background: var(--lightBg);
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Helvetica, Arial, sans-serif, "Apple Color Emoji",
+                "Segoe UI Emoji";
+            color: #24292e;
+            line-height: 1.5;
+            overflow-x: hidden;
+            scroll-behavior: smooth; /* Smooth scrolling voor de hele pagina */
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(#ddd 1px, transparent 1px);
+            background-size: 10px 10px;
+            z-index: -1;
+        }
+
+        html[data-theme='dark'] {
+            background: var(--darkBg);
+        }
+
+        h1, h2, h3, h4, p, a, .progress-bar, .progress-label, .back-button {
+            color: var(--lightColor);
+        }
+
+        input[type=checkbox] {
+            height: 0;
+            width: 0;
+            visibility: hidden;
+        }
+
+        label {
+            cursor: pointer;
+            text-indent: -9999px;
+            width: 55px;
+            height: 30px;
+            background: var(--lightBtn);
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100px;
+            position: relative;
+        }
+
+        label:after {
+            content: '';
+            background: #fff;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: absolute;
+            top: 5px;
+            left: 4px;
+            transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 320ms;
+        }
+
+        input:checked + label {
+            background: var(--darkBtn);
+        }
+
+        input:checked + label:after {
+            left: calc(100% - 5px);
+            transform: translateX(-100%);
+        }
+
+        html.transition,
+        html.transition *,
+        html.transition *:before,
+        html.transition *:after {
+            transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 420ms!important;
+            transition-delay: 0!important;
+        }
+
+        header {
+            background-color: #24292e;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 1.5em;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 20px;
+        }
+
+        #intro {
+            height: 100vh;
+            background-image: url(./paars.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: white;
+            color: white;
+        }
+
+        .title {
+            font-size: 3em;
+            margin: 0;
+            left: 1em;
+            top: 3em;
+            position: absolute;
+        }
+
+        .scroll-down {
+            font-size: 3em;
+            position: absolute;
+            left: 1em;
+            top: 5em;
+            margin: 0;
+            color: white;
+        }
+
+        #gallery,
+        #gallery-bottom {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            overflow: hidden;
+            background: var(--lightSectionBg);
+            box-shadow: 0 1px 3px rgba(27, 31, 35, 0.12),
+                0 8px 24px rgba(27, 31, 35, 0.12);
+            border-radius: 6px;
+            padding: 20px;
+            position: relative;
+        }
+
+        html[data-theme='dark'] #gallery,
+        html[data-theme='dark'] #gallery-bottom {
+            background: var(--darkSectionBg);
+        }
+
+        #gallery-bottom {
+            margin-top: 20px;
+            justify-content: flex-start;
+            flex-direction: row-reverse;
+        }
+
+        #gallery h2,
+        #gallery-bottom h2 {
+            width: 100%;
+            text-align: center;
+            position: absolute;
+        }
+
+        .gallery-container {
+            display: flex;
+            white-space: nowrap;
+            margin-top: 7em;
+        }
+
+        #content,
+        #meesterproef,
+        #hackathon,
+        #reflectie,
+        #vakkenReflectie,
+        #besteNerds {
+            background: var(--lightSectionBg);
+            color: var(--lightSectionColor);
+            padding: 40px;
+            min-height: 100vh;
+            box-shadow: 0 1px 3px rgba(27, 31, 35, 0.12),
+                0 8px 24px rgba(27, 31, 35, 0.12);
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+
+        html[data-theme='dark'] #content,
+        html[data-theme='dark'] #meesterproef,
+        html[data-theme='dark'] #hackathon,
+        html[data-theme='dark'] #reflectie,
+        html[data-theme='dark'] #vakkenReflectie,
+        html[data-theme='dark'] #besteNerds {
+            background: var(--darkSectionBg);
+            color: var(--darkSectionColor);
+        }
+
+        .content-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2em;
+            border-bottom: 1px solid #e1e4e8;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            color: var(--lightHighlightColor);
+        }
+
+        html[data-theme='dark'] h2 {
+            color: var(--darkSectionColor);
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: var(--lightHighlightColor);
+        }
+
+        html[data-theme='dark'] h3 {
+            color: var(--darkSectionColor);
+        }
+
+        p {
+            font-size: 1.2em;
+            color: var(--lightColor);
+        }
+
+        html[data-theme='dark'] p {
+            color: var(--darkColor);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: var(--lightHighlightColor);
+            text-decoration: none;
+        }
+
+        html[data-theme='dark'] a {
+            color: var(--darkSectionColor);
+        }
+
+        .hackathon-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .hackathon-block {
+            flex: 1;
+            min-width: 250px;
+            background: #f6f8fa;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            box-shadow: 0 1px 3px rgba(27, 31, 35, 0.12),
+                0 8px 24px rgba(27, 31, 35, 0.12);
+        }
+
+        html[data-theme='dark'] .hackathon-block {
+            background: var(--darkSectionBg);
+            color: var(--darkColor);
+        }
+
+        .live-example {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #24292e;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .progress-container {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            width: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .progress-bar {
+            width: 10px;
+            background: var(--lightHighlightColor);
+            border-radius: 5px;
+            transition: height 0.3s ease;
+            margin-top: 10px;
+        }
+
+        html[data-theme='dark'] .progress-bar {
+            background: var(--darkSectionColor);
+        }
+
+        .progress-label {
+            color: var(--lightHighlightColor);
+        }
+
+        html[data-theme='dark'] .progress-label {
+            color: var(--darkSectionColor);
+        }
+
+        html[data-theme='dark'] #test-screen, html[data-theme='dark'] #test-screen2, html[data-theme='dark'] #test-screen3, html[data-theme='dark'] #test-screen4, html[data-theme='dark'] #test-screen5, html[data-theme='dark'] #test-screen6, html[data-theme='dark'] #test-screen7, html[data-theme='dark'] #test-screen8, html[data-theme='dark'] #test-screen9, html[data-theme='dark'] #test-screen10, html[data-theme='dark'] #test-screen11 {
+            color: var(--darkSectionColor);
+        }
+
+        #vakken {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        #vakken2 > .gallery-container{
+            margin: 0;
+        }
+
+        .marquee {
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 20s linear infinite;
+        }
+
+        .marquee-item {
+            display: inline-block;
+            width: 200px;
+            margin: 0 20px;
+        }
+
+        .marquee-item img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        #test-screen, #test2-screen, #test3-screen, #test4-screen, #test5-screen, #test6-screen, #test7-screen, #test8-screen, #test9-screen, #test10-screen, #test11-screen{
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 100%;
+            width: 100%;
+            height: 100%;
+            background-color: var(--lightSectionBg);
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            z-index: 9999;
+            transition: transform 0.5s ease-out;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        html[data-theme='dark'] #test-screen, html[data-theme='dark'] #test-screen, html[data-theme='dark'] #test2-screen, html[data-theme='dark'] #test3-screen, html[data-theme='dark'] #test4-screen, html[data-theme='dark'] #test5-screen, html[data-theme='dark'] #test6-screen, html[data-theme='dark'] #test7-screen, html[data-theme='dark'] #test8-screen, html[data-theme='dark'] #test9-screen, html[data-theme='dark'] #test10-screen, html[data-theme='dark'] #test11-screen {
+            background-color: var(--darkSectionBg);
+
+            & li{
+                color: white;
+            }
+        }
+
+        #test-screen.active, #test2-screen.active, #test3-screen.active, #test4-screen.active, #test5-screen.active, #test6-screen.active, #test7-screen.active, #test8-screen.active, #test9-screen.active, #test10-screen.active, #test11-screen.active{
+            display: flex;
+            transform: translateX(-100%);
+        }
+
+        #test-screen button, #test2-screen button, #test3-screen button, #test4-screen button, #test5-screen button, #test6-screen button, #test7-screen button, #test8-screen button, #test9-screen button, #test10-screen button, #test11-screen button{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: var(--lightHighlightColor);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        html[data-theme='dark'] #test-screen button,
+        html[data-theme='dark'] #test2-screen button, 
+        html[data-theme='dark'] #test3-screen button,
+        html[data-theme='dark'] #test4-screen button,
+        html[data-theme='dark'] #test5-screen button,
+        html[data-theme='dark'] #test6-screen button,
+        html[data-theme='dark'] #test7-screen button,
+        html[data-theme='dark'] #test8-screen button,
+        html[data-theme='dark'] #test9-screen button,
+        html[data-theme='dark'] #test10-screen button,
+        html[data-theme='dark'] #test11-screen button {
+
+            background-color: var(--darkSectionColor);
+        }
+
+        #test-screen button:hover, #test2-screen button:hover, #test3-screen button:hover, #test4-screen button:hover, #test5-screen button:hover, #test6-screen button:hover, #test7-screen button:hover, #test8-screen button:hover, #test9-screen button:hover, #test10-screen button:hover, #test11-screen button:hover {
+            background-color: #0354b6;
+        }
+
+        .back-button {
+            margin-top: 20px;
+            align-self: center;
+            padding: 10px 20px;
+            background-color: var(--lightHighlightColor);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        html[data-theme='dark'] .back-button {
+            background-color: var(--darkSectionColor);
+        }
+
+        .back-button:hover {
+            background-color: #0354b6;
+        }
+
+        .gallery-item {
+            flex: 0 0 auto;
+            width: 300px;
+            height: 300px;
+            margin: 0 10px;
+            background-size: cover;
+            background-color: #e1e4e8;
+            border-radius: 6px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.5);
+            z-index: 10;
+        }
+
+        .gallery-item:hover ~ .gallery-item {
+            opacity: 0.5;
+        }
+
+        .gallery-item:hover ~ .gallery-item:hover {
+            opacity: 1;
+        }
+
+        pre {
+            background: #f6f8fa;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(27, 31, 35, 0.12),
+                0 8px 24px rgba(27, 31, 35, 0.12);
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        #vakkenReflectie {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: var(--lightSectionBg);
+}
+
+.bubble {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: var(--lightHighlightColor);
+    opacity: 0.7;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    color: var(--lightColor);
+}
+
+.bubble p {
+    margin: 0;
+    padding: 0;
+}
+
+.bubble:hover {
+    transform: scale(1.2);
+}
+
+@keyframes move {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+    }
+    25% {
+        transform: translateY(-30px) translateX(10px);
+    }
+    50% {
+        transform: translateY(-15px) translateX(-10px);
+    }
+    75% {
+        transform: translateY(20px) translateX(5px);
+    }
+}
+
+#besteNerds {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 50px 0;
+    background: var(--lightSectionBg);
+}
+
+.podium {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.podium div {
+    color: var(--lightColor);
+    width: 200px; /* Increased width */
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.podium .first-place {
+    height: 350px;
+    background: #ffd700; /* Gold color */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.podium .second-place {
+    height: 300px;
+    background: #c0c0c0; /* Silver color */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.podium .third-place {
+    height: 280px;
+    background: #cd7f32; /* Bronze color */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.podium div:hover {
+    transform: scale(1.1);
+}
+
+.podium div h4 {
+    margin: 0 0 10px;
+}
+
+.podium div p {
+    margin: 0;
+}
+
+.speech-bubble {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px; /* Increased width */
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    font-size: 1em;
+    z-index: 10;
+}
+
+.podium div:hover .speech-bubble {
+    visibility: visible;
+    opacity: 1;
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -20px; /* Height of the triangle */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 20px solid white;
+}
+
+
+
+
+
+        html[data-theme='dark'] pre {
+            /* background: var(--darkSectionBg); */
+            color: black;
+        }
+
+        #gallery-bottom .gallery-container {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        #gallery-bottom .gallery-container > .gallery-item {
+            width: 300px;
+            height: 300px;
+            background-size: cover!important;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2em;
+                left: 1em;
+                top: 2em;
+            }
+
+            .scroll-down {
+                font-size: 2em;
+                left: 1em;
+                top: 3em;
+            }
+
+            .gallery-item {
+                width: 200px;
+                height: 200px;
+            }
+
+            .content-wrapper {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .title {
+                font-size: 1.5em;
+                left: 1em;
+                top: 1em;
+            }
+
+            .scroll-down {
+                font-size: 1.5em;
+                left: 1em;
+                top: 2em;
+            }
+
+            .gallery-item {
+                width: 150px;
+                height: 150px;
+            }
+
+            .content-wrapper {
+                padding: 10px;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            p {
+                font-size: 0.8em;
+            }
+        }
+    </style>
+    <!-- Voeg GSAP en ScrollTrigger toe -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <section id="intro">
+        <h1 class="title">Welkom op mijn blog</h1>
+        <p class="scroll-down">Autoscroll incoming...</p>
+    </section>
+
+    <section id="gallery">
+        <h2>Weekly Nerds</h2>
+        <div class="gallery-container">
+            <div class="gallery-item"
+                style="background: url('./nerds/kilian2.png') no-repeat center center;">
+            </div>
+            <div class="gallery-item"
+                style="background: url('./nerds/fenna.png') no-repeat center center;">
+            </div>
+            <div class="gallery-item"
+                style="background: url('./images/jeffrey.png') no-repeat center center;">
+            </div>
+            <div class="gallery-item"
+                style="background: url('./nerds/nils.png') no-repeat center center;">
+            </div>
+            <div class="gallery-item"
+                style="background: url('./nerds/jeremy.png') no-repeat center center;">
+            </div>
+            <div class="gallery-item"
+                style="background: url('./nerds/marieke2.png') no-repeat center center;">
+            </div>
+            <div class="gallery-item"
+                style="background: url('./nerds/miriam.png') no-repeat center center;">
+            </div>
+            <div class="gallery-item"
+                style="background: url('./nerds/robert2.png') no-repeat center center;">
+            </div>
+            
+            <div class="gallery-item"
+                style="background: url('./nerds/bart.png') no-repeat center center;">
+            </div>
+            <div class="gallery-item"
+                style="background: url('./nerds/bramus.png') no-repeat center center;">
+            </div>
+            <div class="gallery-item"
+                style="background: url('./nerds/miriam.png') no-repeat center center;">
+            </div>
+            <div class="gallery-item"
+                style="background: url('./nerds/robert2.png') no-repeat center center;">
+            </div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-label" id="progress-label-1">0 / 12</div>
+            <div class="progress-bar" id="progress-bar-1" style="height: 0"></div>
+        </div>
+    </section>
+
+    <section id="vakken2">
+        <h2>Talen</h2>
+        <div class="gallery-container">
+            <div class="gallery-item" style="background: url('./images/html.png') no-repeat center center;"></div>
+            <div class="gallery-item" style="background: url('./images/css.png') no-repeat center center;"></div>
+            <div class="gallery-item" style="background: url('./images/js.png') no-repeat center center;"></div>
+            <div class="gallery-item" style="background: url('./images/node.png') no-repeat center center;"></div>
+        </div>
+    </section>
+
+    <section id="content">
+        <div class="content-wrapper">
+            <h2>Over Mij</h2>
+            <p>
+                Mijn naam is Bart, een 23-jarige enthousiasteling op het gebied van
+                webdesign en -ontwikkeling van CMD aan de Hogeschool van Amsterdam. Ik
+                heb een sterke passie voor webontwikkeling en ben voortdurend bezig
+                met het leren en verkennen van nieuwe concepten in HTML, CSS en
+                JavaScript.
+            </p>
+            <p>
+                Gedurende mijn minor Web Development heb ik veel geleerd over het
+                ontwerpen en ontwikkelen van websites en webapplicaties. Het maken van
+                websites en webapplicaties is niet alleen hobby of werk voor mij, maar
+                gedurende deze minor een ware passie geworden. Ik kijk ernaar uit om
+                mijn vaardigheden verder te ontwikkelen en bij te dragen aan de
+                voortdurend veranderende wereld van webontwikkeling.
+            </p>
+            <h3>Persoonlijke website / Projecten</h3>
+            <p>
+                Projecten zijn te vinden op mijn eigen portfolio website:
+                <a href="https://www.bartspons.com">www.bartspons.com</a>
+            </p>
+            <h3>Github</h3>
+            <p>
+                Alle informatie van de Weekly Nerds heb ik van mijn eigen Github
+                repository afgehaald. Ik heb deze .md bestanden geschreven en
+                gefetched op de homepagina van deze site.
+            </p>
+            <p>
+                Mijn Github-profiel is te vinden op:
+                <a href="https://github.com/Bart-Spons">Github</a>
+            </p>
+            <h3>Weetje over mij?</h3>
+            <p>Ik gebruik liever darkmode, probeer het ook</p>
+            <div class="container">
+                <input class="container_toggle" type="checkbox" id="switch" name="mode">
+                <label for="switch">Toggle</label>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery-bottom">
+        <h2>Vakken</h2>
+        <div class="gallery-container">
+            <div class="gallery-item" style="background: url('./images/polypane2.png') no-repeat center center;"></div>
+
+            <div class="gallery-item" style="background: url('./images/polypane2.png') no-repeat center center;"></div>
+            <div class="gallery-item" style="background: url('./images/polypane2.png') no-repeat center center;"></div>
+            <div class="gallery-item" style="background: url('./images/polypane2.png') no-repeat center center;"></div>
+            <div class="gallery-item" style="background: url('./images/polypane2.png') no-repeat center center;"></div>
+            <div class="gallery-item" style="background: url('./images/polypane2.png') no-repeat center center;"></div>
+            <div class="gallery-item" style="background: url('./images/polypane2.png') no-repeat center center;"></div>
+            <div class="gallery-item" style="background: url('./images/polypane2.png') no-repeat center center;"></div>
+            <div class="gallery-item" style="background: url('./images/polypane2.png') no-repeat center center;"></div>
+            <div class="gallery-item" style="background: url('./images/polypane2.png') no-repeat center center;"></div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-label" id="progress-label-2">0 / 10</div>
+            <div class="progress-bar" id="progress-bar-2" style="height: 0"></div>
+        </div>
+    </section>
+
+    <section id="meesterproef">
+        <div class="content-wrapper">
+            <h2>Meesterproef</h2>
+            <p>
+                Drie persoonlijke leerdoelen voor de meesterproef. Die
+                worden onderdeel van de beoordeling. Goed om persoonlijke
+                leerdoelen op verschillende vlakken te kiezen: bijv. inhoud,
+                samenwerken, tooling, lef ... (of andere competenties). Geef
+                ook aan hoe je van plan bent om aan elk leerdoel te werken
+                tijdens de meesterproef.
+            </p>
+            <h2>Leerdoelen</h2>
+            <h3>Web Design (Front-End)</h3>
+            <p>
+                Mijn eerste leerdoel is gericht op het verbeteren van mijn
+                vaardigheden op het gebied van webdesign. Ik wil me meer
+                verdiepen in het ontwerpen van websites en webapplicaties,
+                waarbij ik aandacht besteed aan gebruikerservaring en
+                visuele aantrekkelijkheid. Tijdens de meesterproef wil ik
+                werken aan het ontwerpen van een interactieve website die
+                gebruikmaakt van animaties en micro-interacties om de
+                gebruikerservaring te verbeteren.
+            </p>
+            <h3>Meer uitdaging</h3>
+            <p>
+                Mijn tweede leerdoel is gericht op het aangaan van meer
+                uitdaging tijdens de meesterproef. Ik wil mezelf uitdagen om
+                nieuwe concepten en technieken te verkennen, waarbij ik mijn
+                grenzen verleg en buiten mijn comfortzone treed. Ik wil
+                experimenteren met geavanceerde webtechnologieën en
+                innovatieve ontwerpprincipes, om zo mijn vaardigheden verder
+                te ontwikkelen en te groeien als webontwikkelaar.
+            </p>
+            <h3>Samenwerken (leiding nemen)</h3>
+            <p>
+                Mijn derde leerdoel is gericht op het verbeteren van mijn
+                samenwerkingsvaardigheden en leiderschapskwaliteiten. Ik wil
+                leren hoe ik effectief kan samenwerken in een team, waarbij
+                ik de rol van projectleider op me neem en verantwoordelijk
+                ben voor het coördineren van taken en het bewaken van de
+                voortgang. Tijdens de meesterproef wil ik werken aan het
+                leiden van een multidisciplinair team, waarbij ik mijn
+                communicatieve vaardigheden en organisatorische talenten
+                verder ontwikkel.
+            </p>
+        </div>
+    </section>
+
+    <section id="reflectie">
+        <div class="content-wrapper">
+            <h2>Reflectie</h2>
+            <p>
+                Hoe is het gegaan en dan in het bijzonder de meesterproef (grootste leermomenten, wat viel mee, was nog lastig, waar ben je trots op...)
+            </p>
+            <p>Hoe is het gegaan met je persoonlijke leerdoelen?</p>
+            <p>Wat zijn de highlights van de Weekly Nerd sprekers?</p>
+            <p>wat zijn de highlights van elk vak?</p>
+
+            <h3>Meesterproef</h3>
+            <p>Tijdens de meesterproef heb ik samen gewerkt met Jop en Joppe. Ik voelde mij de junior van de groep.  </p>
+
+            <h3>Leerdoelen</h3>
+            <p>Ik heb mijn leerdoelen behaald. Ik heb veel geleerd. Niet alleen over code maar ook over secuur werken. Elke pull request met aandachtig nagekeken door mijn teamgenoten. </p>
+
+
+            </div>
+    </section>
+    <section id="besteNerds">
+        <div class="content-wrapper">
+            <h2>Weekly Nerds</h2>
+            <div class="podium">
+                <div class="second-place">
+                    <h4>Bramus</h4>
+                    <p>2</p>
+                    <div class="speech-bubble">
+                        <p>Google! Grootste idool van alle sprekers als ik een iemand moest kiezen</p>
+                    </div>
+                </div>
+                <div class="first-place">
+                    <h4>Kilian</h4>
+                    <p>1</p>
+                    <div class="speech-bubble">
+                        <p>Hij heeft een browser gemaakt, easy nr 1</p>
+                    </div>
+                </div>
+                <div class="third-place">
+                    <h4>Robert</h4>
+                    <p>3</p>
+                    <div class="speech-bubble">
+                        <p>Geld... waarom praten we daar niet over?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+    
+
+            <section id="vakkenReflectie">
+                <div class="content-wrapper">
+
+
+            <!-- <div>
+            <p>WAFS</p>
+            <p>Leuk voor de docenten om iedereen zijn niveau te bepalen.</p>
+        </div>
+
+        <div>
+            <p>CSS</p>
+            <p>Zeer leerzaam</p>
+        </div>
+
+        <div>
+            <p>Browser Technologies</p>
+            <p>Voortaan even info geven over PPK</p>
+        </div>
+
+        <div>
+            <p>Hackaton</p>
+            <p>Top, CSS day is geweldig</p>
+        </div>
+
+    <div>
+            <p>UCD</p>
+            <p>Top</p>
+        </div>
+
+            <div>
+            <p>API</p>
+            <p>Leuk maar moet het zelf moeilijk maken</p>
+        </div>
+
+            <div>
+            <p>Meesterproef</p>
+            <p>Knallend einde</p>
+        </div> -->
+
+        </div>
+    </section>
+
+    
+    <div id="test-screen">
+        <h2>Weekly Nerd Week 1</h2>
+    </div>
+    <div id="test2-screen">
+        <h2>Weekly Nerd Week 2</h2>
+    </div>
+    <div id="test3-screen">
+        <h2>Weekly Nerd Week 3</h2>
+    </div>
+    <div id="test4-screen">
+        <h2>Weekly Nerd Week 4</h2>
+    </div>
+    <div id="test5-screen">
+        <h2>Weekly Nerd Week 5</h2>
+    </div>
+    <div id="test6-screen">
+        <h2>Weekly Nerd Week 6</h2>
+    </div>
+    <div id="test7-screen">
+        <h2>Weekly Nerd Week 7</h2>
+    </div>
+    <div id="test8-screen">
+        <h2>Weekly Nerd Week 8</h2>
+    </div>
+    <div id="test9-screen">
+        <h2>Weekly Nerd Week 9</h2>
+    </div>
+    <div id="test10-screen">
+        <h2>Weekly Nerd Week 10</h2>
+    </div>
+    <div id="test11-screen">
+        <h2>Weekly Nerd Week 11</h2>
+    </div>
+
+    <footer>© 2024 Minor Web</footer>
+
+    <script type="module">
+        import { unified } from 'https://esm.sh/unified@11?bundle';
+        import remarkParse from 'https://esm.sh/remark-parse@11?bundle';
+        import remarkRehype from 'https://esm.sh/remark-rehype@11?bundle';
+        import rehypeStringify from 'https://esm.sh/rehype-stringify@8?bundle';
+
+        async function main() {
+            const processor = unified()
+                .use(remarkParse)
+                .use(remarkRehype)
+                .use(rehypeStringify);
+
+            const username = 'Bart-Spons';
+            const repository = 'WeeklyNerd';
+
+            function loadWeekMarkdown(weekNumber, elementId) {
+                fetch(`https://raw.githubusercontent.com/${username}/${repository}/main/week${weekNumber}.md`)
+                    .then(response => response.text())
+                    .then(output => {
+                        const html = processor.processSync(output);
+                        const contentDiv = document.getElementById(elementId);
+                        contentDiv.innerHTML = String(html);
+                        
+                        const backButton = document.createElement('button');
+                        backButton.classList.add('back-button');
+                        backButton.textContent = "Terug naar de hoofdpagina";
+                        backButton.onclick = closeTestScreen;
+                        contentDiv.appendChild(backButton);
+                    })
+                    .catch(error => console.error(error));
+            }
+
+            loadWeekMarkdown(1, 'test-screen');
+            loadWeekMarkdown(2, 'test2-screen');
+            loadWeekMarkdown(3, 'test3-screen');
+            loadWeekMarkdown(4, 'test4-screen');
+            loadWeekMarkdown(5, 'test5-screen');
+            loadWeekMarkdown(6, 'test6-screen');
+            loadWeekMarkdown(7, 'test7-screen');
+            loadWeekMarkdown(8, 'test8-screen');
+            loadWeekMarkdown(9, 'test9-screen');
+            loadWeekMarkdown(10, 'test10-screen');
+            loadWeekMarkdown(11, 'test11-screen');
+        }
+
+        main().then(() => console.log("live"));
+
+        document.querySelectorAll(".gallery-item")[0].addEventListener("click", () => {
+            document.startViewTransition(() => {
+                document.getElementById("test-screen").classList.add("active");
+            });
+        });
+
+        document.querySelectorAll(".gallery-item")[1].addEventListener("click", () => {
+            document.startViewTransition(() => {
+                document.getElementById("test2-screen").classList.add("active");
+            });
+        });
+
+        document.querySelectorAll(".gallery-item")[2].addEventListener("click", () => {
+            document.startViewTransition(() => {
+                document.getElementById("test3-screen").classList.add("active");
+            });
+        });
+
+        document.querySelectorAll(".gallery-item")[3].addEventListener("click", () => {
+            document.startViewTransition(() => {
+                document.getElementById("test4-screen").classList.add("active");
+            });
+        });
+
+        document.querySelectorAll(".gallery-item")[4].addEventListener("click", () => {
+            document.startViewTransition(() => {
+                document.getElementById("test5-screen").classList.add("active");
+            });
+        });
+
+        document.querySelectorAll(".gallery-item")[5].addEventListener("click", () => {
+            document.startViewTransition(() => {
+                document.getElementById("test6-screen").classList.add("active");
+            });
+        });
+
+        document.querySelectorAll(".gallery-item")[6].addEventListener("click", () => {
+            document.startViewTransition(() => {
+                document.getElementById("test7-screen").classList.add("active");
+            });
+        });
+
+        document.querySelectorAll(".gallery-item")[7].addEventListener("click", () => {
+            document.startViewTransition(() => {
+                document.getElementById("test8-screen").classList.add("active");
+            });
+        });
+
+        document.querySelectorAll(".gallery-item")[8].addEventListener("click", () => {
+            document.startViewTransition(() => {
+                document.getElementById("test9-screen").classList.add("active");
+            });
+        });
+
+        document.querySelectorAll(".gallery-item")[9].addEventListener("click", () => {
+            document.startViewTransition(() => {
+                document.getElementById("test10-screen").classList.add("active");
+            });
+        });
+
+        document.querySelectorAll(".gallery-item")[10].addEventListener("click", () => {
+            document.startViewTransition(() => {
+                document.getElementById("test11-screen").classList.add("active");
+            });
+        });
+
+        function closeTestScreen() {
+            document.getElementById("test-screen").classList.remove("active");
+            document.getElementById("test2-screen").classList.remove("active");
+            document.getElementById("test3-screen").classList.remove("active");
+            document.getElementById("test4-screen").classList.remove("active");
+            document.getElementById("test5-screen").classList.remove("active");
+            document.getElementById("test6-screen").classList.remove("active");
+            document.getElementById("test7-screen").classList.remove("active");
+            document.getElementById("test8-screen").classList.remove("active");
+            document.getElementById("test9-screen").classList.remove("active");
+            document.getElementById("test10-screen").classList.remove("active");
+            document.getElementById("test11-screen").classList.remove("active");
+        }
+
+        gsap.to(".title", {
+            y: -200,
+            opacity: 0,
+            duration: 1,
+            delay: 3,
+        });
+
+        gsap.to(".scroll-down", {
+            y: -220,
+            opacity: 0,
+            duration: 1,
+            delay: 5,
+        });
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.to("#gallery .gallery-container", {
+            x: () =>
+                -(
+                    document.querySelector("#gallery .gallery-container")
+                        .scrollWidth - window.innerWidth
+                ),
+            ease: "none",
+            scrollTrigger: {
+                trigger: "#gallery",
+                start: "top top",
+                end: "bottom top",
+                scrub: true,
+                pin: true,
+                onUpdate: (self) => {
+                    const progress = Math.floor(self.progress * 12);
+                    document.getElementById(
+                        "progress-bar-1"
+                    ).style.height = `${self.progress * 100}%`;
+                    document.getElementById(
+                        "progress-label-1"
+                    ).textContent = `${progress} / 12`;
+                },
+            },
+        });
+
+        gsap.to("#gallery-bottom .gallery-container", {
+            x: () =>
+                -(
+                    window.innerWidth -
+                    document.querySelector(
+                        "#gallery-bottom .gallery-container"
+                    ).scrollWidth
+                ),
+            ease: "none",
+            scrollTrigger: {
+                trigger: "#gallery-bottom",
+                start: "top top",
+                end: "bottom top",
+                scrub: true,
+                pin: true,
+                onUpdate: (self) => {
+                    const progress = Math.floor(self.progress * 10);
+                    document.getElementById(
+                        "progress-bar-2"
+                    ).style.height = `${self.progress * 100}%`;
+                    document.getElementById(
+                        "progress-label-2"
+                    ).textContent = `${progress} / 10`;
+                },
+            },
+        });
+
+        gsap.to(".gallery-item", {
+            rotation: 360,
+            scrollTrigger: {
+                trigger: "#vakken2",
+                start: "top center",
+                end: "bottom center",
+                scrub: true,
+            },
+        });
+
+        function smoothScrollByY(targetY, duration) {
+            const start = window.pageYOffset;
+            const change = targetY - start;
+            const startTime = performance.now();
+
+            function animateScroll(currentTime) {
+                const elapsedTime = currentTime - startTime;
+                const progress = Math.min(elapsedTime / duration, 1);
+                window.scrollTo(0, start + change * progress);
+                if (progress < 1) {
+                    requestAnimationFrame(animateScroll);
+                }
+            }
+
+            requestAnimationFrame(animateScroll);
+        }
+
+        function autoScroll() {
+            // smoothScrollByY(window.pageYOffset + (2.4 * window.innerHeight), 6000);
+        }
+
+        setTimeout(autoScroll, 7000);
+
+        var checkbox = document.querySelector('input[name=mode]');
+
+        checkbox.addEventListener('change', function() {
+            if (this.checked) {
+                trans();
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                trans();
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        });
+
+        let trans = () => {
+            document.documentElement.classList.add('transition');
+            window.setTimeout(() => {
+                document.documentElement.classList.remove('transition');
+            }, 1000);
+        };
+
+        document.addEventListener("DOMContentLoaded", function() {
+        const container = document.getElementById("vakkenReflectie");
+        const bubbles = [
+            { title: "WAFS", text: "Leuk voor de docenten om iedereen zijn niveau te bepalen." },
+            { title: "CSS", text: "Maak wat je wil, altijd leuk!" },
+            { title: "Browser Technologies", text: "PPK werd soms belachelijk gemaakt, vertel van tevoren wie hij is" },
+            { title: "Hackaton", text: "Top, CSS day is geweldig (meer tickets vrijmaken)" },
+            { title: "UCD", text: "Werken met een echte doelgroep!" },
+            { title: "API", text: "Leuk maar moet het zelf moeilijk maken" },
+            { title: "Meesterproef", text: "Knallend einde van een geweldige minor!" }
+        ];
+        const colors = ['#66d9ef', '#ae81ff', '#a6e22e', '#f92672', '#fd971f'];
+
+        bubbles.forEach((bubbleContent, index) => {
+            const bubble = document.createElement("div");
+            bubble.className = "bubble";
+            bubble.innerHTML = `<p><strong>${bubbleContent.title}</strong></p><p>${bubbleContent.text}</p>`;
+            bubble.style.left = `${(index % 3) * 33 + 10}%`;  // Spreading bubbles horizontally
+            bubble.style.top = `${Math.floor(index / 3) * 35 + 10}%`;  // Spreading bubbles vertically
+            bubble.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            bubble.style.animation = `move ${Math.random() * 5 + 3}s ease-in-out infinite`;
+            container.appendChild(bubble);
+        });
+    });
+    </script>
+</body>
+</html>
