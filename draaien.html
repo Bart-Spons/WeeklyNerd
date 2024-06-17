@@ -207,7 +207,9 @@
         #hackathon,
         #reflectie,
         #vakkenReflectie,
-        #besteNerds {
+        #besteNerds,
+        #nerd2,
+        #polypane {
             background: var(--lightSectionBg);
             color: var(--lightSectionColor);
             padding: 40px;
@@ -223,7 +225,9 @@
         html[data-theme='dark'] #hackathon,
         html[data-theme='dark'] #reflectie,
         html[data-theme='dark'] #vakkenReflectie,
-        html[data-theme='dark'] #besteNerds {
+        html[data-theme='dark'] #besteNerds,
+        html[data-theme='dark'] #nerd2,
+        html[data-theme='dark'] #polypane {
             background: var(--darkSectionBg);
             color: var(--darkSectionColor);
         }
@@ -568,7 +572,7 @@
             background: var(--lightSectionBg);
         }
 
-        .podium {
+        #besteNerds .podium {
             display: flex;
             align-items: flex-end;
             justify-content: center;
@@ -578,7 +582,7 @@
             margin: 0 auto;
         }
 
-        .podium div {
+        #besteNerds .podium div {
             color: var(--lightColor);
             width: 200px; /* Increased width */
             border-radius: 10px 10px 0 0;
@@ -594,35 +598,108 @@
             transition: transform 0.3s ease, background 0.3s ease;
         }
 
-        .podium .first-place {
+        #besteNerds .podium .first-place {
             height: 350px;
             background: #ffd700; /* Gold color */
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
-        .podium .second-place {
+        #besteNerds .podium .second-place {
             height: 300px;
             background: #c0c0c0; /* Silver color */
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
-        .podium .third-place {
+        #besteNerds .podium .third-place {
             height: 280px;
             background: #cd7f32; /* Bronze color */
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
         }
 
-        .podium div:hover {
+        #besteNerds .podium div:hover {
             transform: scale(1.1);
         }
 
-        .podium div h4 {
+        #besteNerds .podium div h4 {
             margin: 0 0 10px;
         }
 
-        .podium div p {
+        #besteNerds .podium div p {
             margin: 0;
         }
+
+        #nerd2 .podium {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    margin-top: 20px; /* Zorgt ervoor dat de podium sectie niet bovenaan geplakt is */
+}
+
+#nerd2 .place {
+    width: 7em;
+    border: 2px solid black;
+    text-align: center;
+    color: black;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+    position: relative; /* Voor positioneren van de .fill div */
+}
+
+#nerd2 .fill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    transition: height 0.1s;
+}
+
+#nerd2 p{
+    position: relative;
+}
+
+#nerd2 .first .fill {
+    background-color: gold;
+}
+
+#nerd2 .second .fill {
+    background-color: silver;
+}
+
+#nerd2 .third .fill {
+    background-color: grey;
+}
+
+#nerd2 .first {
+    height: 15em;
+}
+
+#nerd2 .second {
+    height: 12.5em;
+}
+
+#nerd2 .third {
+    height: 10em;
+}
+
+#polypane {
+    
+    & h2{
+        text-align: center;
+    }
+    & div{
+        /* display: flex; */
+    }
+    & img{
+
+    
+    width: 100%;
+    height: auto;
+    }
+}
 
         .speech-bubble {
             position: absolute;
@@ -814,6 +891,9 @@
             .speech-bubble {
                 width: 200px;
             }
+
+         
+
         }
     </style>
     <!-- Voeg GSAP en ScrollTrigger toe -->
@@ -1039,6 +1119,39 @@
             </div>
         </div>
     </section>
+
+    <section id="nerd2">
+        <h2>Best Nerds</h2>
+        <div class="podium">
+            
+            <div class="place second">
+                <div class="fill"></div>
+                <p>Bramus</p>
+            </div>
+            <div class="place first">
+                <div class="fill"></div>
+                <p>Kilian</p>
+            </div>
+            <div class="place third">
+                <div class="fill"></div>
+                <p>Robert</p>
+            </div>
+        </div>
+        
+    </section>
+
+    <section id="polypane">
+        <div class="content-wrapper">
+            <h2>polypane</h2>
+            <div>
+                <img src="./images/polypane2.png" alt="Polypane logo">
+            </div>
+            
+        </div>
+    </section>
+    
+    
+    
 
     <section id="vakkenReflectie">
         <div class="content-wrapper">
@@ -1332,7 +1445,7 @@
         }
 
         function autoScroll() {
-            // smoothScrollByY(window.pageYOffset + (2.4 * window.innerHeight), 6000);
+            //  smoothScrollByY(window.pageYOffset + (2.4 * window.innerHeight), 6000);
         }
 
         setTimeout(autoScroll, 7000);
@@ -1380,6 +1493,35 @@
                 container.appendChild(bubble);
             });
         });
+
+        window.addEventListener('scroll', function() {
+    const section = document.querySelector('#nerd2');
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    const places = section.querySelectorAll('.place');
+    
+
+    const scrollTop = window.scrollY;
+    const scrollBottom = scrollTop + window.innerHeight;
+
+    if (scrollBottom >= sectionTop && scrollTop <= sectionTop + sectionHeight) {
+        const scrollPercent = (scrollBottom - sectionTop) / sectionHeight * 100;
+
+        places.forEach(place => {
+            const fill = place.querySelector('.fill');
+            const placeHeight = place.clientHeight;
+            const fillHeight = (scrollPercent / 100) * placeHeight;
+            fill.style.height = `${fillHeight}px`;
+        });
+    } else {
+        places.forEach(place => {
+            const fill = place.querySelector('.fill');
+            fill.style.height = `0px`;
+        });
+    }
+});
+
+
     </script>
 </body>
 </html>
