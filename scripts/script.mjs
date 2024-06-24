@@ -31,97 +31,99 @@ async function main() {
     }
 
     loadWeekMarkdown(1, 'weekly-nerd');
-    loadWeekMarkdown(2, 'weekly-nerd2');
-    loadWeekMarkdown(3, 'weekly-nerd3');
-    loadWeekMarkdown(4, 'weekly-nerd4');
-    loadWeekMarkdown(5, 'weekly-nerd5');
-    loadWeekMarkdown(6, 'weekly-nerd6');
-    loadWeekMarkdown(7, 'weekly-nerd7');
-    loadWeekMarkdown(8, 'weekly-nerd8');
-    loadWeekMarkdown(9, 'weekly-nerd9');
-    loadWeekMarkdown(10, 'weekly-nerd10');
-    loadWeekMarkdown(11, 'weekly-nerd11');
+    loadWeekMarkdown(2, 'weekly-nerd-2');
+    loadWeekMarkdown(3, 'weekly-nerd-3');
+    loadWeekMarkdown(4, 'weekly-nerd-4');
+    loadWeekMarkdown(5, 'weekly-nerd-5');
+    loadWeekMarkdown(6, 'weekly-nerd-6');
+    loadWeekMarkdown(7, 'weekly-nerd-7');
+    loadWeekMarkdown(8, 'weekly-nerd-8');
+    loadWeekMarkdown(9, 'weekly-nerd-9');
+    loadWeekMarkdown(10, 'weekly-nerd-10');
+    loadWeekMarkdown(11, 'weekly-nerd-11');
 }
 
 main().then(() => console.log("live"));
+
 document.querySelectorAll(".gallery-item")[0].addEventListener("click", () => {
     document.startViewTransition(() => {
-        document.querySelector(".weekly-nerd-1").classList.add("active");
+        document.getElementById("weekly-nerd").classList.add("active");
     });
 });
 
 document.querySelectorAll(".gallery-item")[1].addEventListener("click", () => {
     document.startViewTransition(() => {
-        document.querySelector(".weekly-nerd-2").classList.add("active");
+        document.getElementById("weekly-nerd-2").classList.add("active");
     });
 });
 
 document.querySelectorAll(".gallery-item")[2].addEventListener("click", () => {
     document.startViewTransition(() => {
-        document.querySelector(".weekly-nerd-3").classList.add("active");
+        document.getElementById("weekly-nerd-3").classList.add("active");
     });
 });
 
 document.querySelectorAll(".gallery-item")[3].addEventListener("click", () => {
     document.startViewTransition(() => {
-        document.querySelector(".weekly-nerd-4").classList.add("active");
+        document.getElementById("weekly-nerd-4").classList.add("active");
     });
 });
 
 document.querySelectorAll(".gallery-item")[4].addEventListener("click", () => {
     document.startViewTransition(() => {
-        document.querySelector(".weekly-nerd-5").classList.add("active");
+        document.getElementById("weekly-nerd-5").classList.add("active");
     });
 });
 
 document.querySelectorAll(".gallery-item")[5].addEventListener("click", () => {
     document.startViewTransition(() => {
-        document.querySelector(".weekly-nerd-6").classList.add("active");
+        document.getElementById("weekly-nerd-6").classList.add("active");
     });
 });
 
 document.querySelectorAll(".gallery-item")[6].addEventListener("click", () => {
     document.startViewTransition(() => {
-        document.querySelector(".weekly-nerd-7").classList.add("active");
+        document.getElementById("weekly-nerd-7").classList.add("active");
     });
 });
 
 document.querySelectorAll(".gallery-item")[7].addEventListener("click", () => {
     document.startViewTransition(() => {
-        document.querySelector(".weekly-nerd-8").classList.add("active");
+        document.getElementById("weekly-nerd-8").classList.add("active");
     });
 });
 
 document.querySelectorAll(".gallery-item")[8].addEventListener("click", () => {
     document.startViewTransition(() => {
-        document.querySelector(".weekly-nerd-9").classList.add("active");
+        document.getElementById("weekly-nerd-9").classList.add("active");
     });
 });
 
 document.querySelectorAll(".gallery-item")[9].addEventListener("click", () => {
     document.startViewTransition(() => {
-        document.querySelector(".weekly-nerd-10").classList.add("active");
+        document.getElementById("weekly-nerd-10").classList.add("active");
     });
 });
 
 document.querySelectorAll(".gallery-item")[10].addEventListener("click", () => {
     document.startViewTransition(() => {
-        document.querySelector(".weekly-nerd-11").classList.add("active");
+        document.getElementById("weekly-nerd-11").classList.add("active");
     });
 });
 
 function closeTestScreen() {
-    document.querySelector(".weekly-nerd-1").classList.remove("active");
-    document.querySelector(".weekly-nerd-2").classList.remove("active");
-    document.querySelector(".weekly-nerd-3").classList.remove("active");
-    document.querySelector(".weekly-nerd-4").classList.remove("active");
-    document.querySelector(".weekly-nerd-5").classList.remove("active");
-    document.querySelector(".weekly-nerd-6").classList.remove("active");
-    document.querySelector(".weekly-nerd-7").classList.remove("active");
-    document.querySelector(".weekly-nerd-8").classList.remove("active");
-    document.querySelector(".weekly-nerd-9").classList.remove("active");
-    document.querySelector(".weekly-nerd-10").classList.remove("active");
-    document.querySelector(".weekly-nerd-11").classList.remove("active");
+    document.getElementById("weekly-nerd").classList.remove("active");
+    document.getElementById("weekly-nerd-2").classList.remove("active");
+    document.getElementById("weekly-nerd-3").classList.remove("active");
+    document.getElementById("weekly-nerd-4").classList.remove("active");
+    document.getElementById("weekly-nerd-5").classList.remove("active");
+    document.getElementById("weekly-nerd-6").classList.remove("active");
+    document.getElementById("weekly-nerd-7").classList.remove("active");
+    document.getElementById("weekly-nerd-8").classList.remove("active");
+    document.getElementById("weekly-nerd-9").classList.remove("active");
+    document.getElementById("weekly-nerd-10").classList.remove("active");
+    document.getElementById("weekly-nerd-11").classList.remove("active");
+
 }
 
 gsap.to(".title", {
@@ -220,7 +222,7 @@ function smoothScrollByY(targetY, duration) {
 }
 
 function autoScroll() {
-    smoothScrollByY(window.pageYOffset + (2.4 * window.innerHeight), 6000);
+    // smoothScrollByY(window.pageYOffset + (2.4 * window.innerHeight), 6000);
 }
 
 setTimeout(autoScroll, 7000);

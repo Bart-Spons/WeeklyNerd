@@ -30,7 +30,7 @@
 html {
     background: var(--lightBg);
 
-    &[data-theme='dark'] {
+    &[data-theme="dark"] {
         background: var(--darkBg);
         h2,
         h3,
@@ -64,7 +64,7 @@ html {
             color: var(--darkSectionColor);
         }
 
-        .weekly-nerd-1,
+        .weekly-nerd,
         .weekly-nerd-2,
         .weekly-nerd-3,
         .weekly-nerd-4,
@@ -106,17 +106,17 @@ html {
 
 /* filson font */
 @font-face {
-    font-family: 'Filson';
-    src: url('../fonts/FilsonSoft-Bold.woff2') format('woff2'),
-        url('../fonts/FilsonSoft-Bold.woff') format('woff');
+    font-family: "Filson";
+    src: url("../fonts/FilsonSoft-Bold.woff2") format("woff2"),
+        url("../fonts/FilsonSoft-Bold.woff") format("woff");
     font-weight: bold;
     font-style: normal;
 }
 
 /* simpsons font */
 @font-face {
-    font-family: 'Simpsons';
-    src: url('../fonts/filson-pro/Simpsonfont.otf') format('truetype');
+    font-family: "Simpsons";
+    src: url("../fonts/filson-pro/Simpsonfont.otf") format("truetype");
     font-weight: bold;
     font-style: normal;
 }
@@ -141,15 +141,50 @@ body {
     }
 }
 
-h1, h2, h3, p, a, .progress-bar, .progress-label, .back-button {
+h1,
+h2,
+h3,
+p,
+a,
+.progress-bar,
+.progress-label,
+.back-button {
     color: var(--lightColor);
 }
 
-h1, h2, h3 {
-    font-family: 'Simpsons';
+h1,
+h2,
+h3 {
+    font-family: "Simpsons";
 }
 
-input[type=checkbox] {
+.pdf {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(145deg, #6a5acd, #6a5acd);
+    border: 1px solid #1a1a1a;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #1a1a1a, -2px -2px 5px hwb(0 12% 87%);
+    transition: all 0.3s ease;
+}
+
+.pdf:hover {
+    background: linear-gradient(145deg, #6a5acd, #6a5acd);
+    box-shadow: 2px 2px 5px #1a1a1a, -2px -2px 5px hwb(0 51% 47%);
+    transform: translateY(-3px);
+}
+
+.pdf:active {
+    background: linear-gradient(145deg, #6a5acd, #6a5acd);
+    box-shadow: 2px 2px 5px #1a1a1a, -2px -2px 5px hwb(0 51% 47%);
+    transform: translateY(2px);
+}
+
+input[type="checkbox"] {
     height: 0;
     width: 0;
     visibility: hidden;
@@ -169,7 +204,7 @@ label {
     position: relative;
 
     &:after {
-        content: '';
+        content: "";
         background: var(--white);
         width: 1.25em; /* 20px */
         height: 1.25em; /* 20px */
@@ -188,14 +223,6 @@ label {
             transform: translateX(-100%);
         }
     }
-}
-
-header {
-    background-color: #24292e;
-    padding: 1.25em; /* 20px */
-    text-align: center;
-    color: var(--white);
-    font-size: 1.5em;
 }
 
 section {
@@ -226,7 +253,7 @@ section {
 }
 
 .scroll-down {
-    font-family: 'Simpsons';
+    font-family: "Simpsons";
     font-size: 3em;
     position: absolute;
     left: 1em;
@@ -410,7 +437,7 @@ footer {
     }
 }
 
-.weekly-nerd-1,
+.weekly-nerd,
 .weekly-nerd-2,
 .weekly-nerd-3,
 .weekly-nerd-4,
@@ -480,8 +507,9 @@ footer {
     width: 18.75em; /* 300px */
     height: 18.75em; /* 300px */
     margin: 0 0.625em; /* 10px */
-    background-size: cover;
-    background-color: #e1e4e8;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-color: #e1e4e8; */
     border-radius: 0.375em; /* 6px */
     transition: transform 0.3s ease, opacity 0.3s ease;
     cursor: pointer;
@@ -550,7 +578,8 @@ pre {
 }
 
 @keyframes move {
-    0%, 100% {
+    0%,
+    100% {
         transform: translateY(0) translateX(0);
     }
     25% {
@@ -658,7 +687,7 @@ pre {
 
     p {
         position: relative;
-        font-family: 'Simpsons';
+        font-family: "Simpsons";
     }
 
     &.first .fill {
@@ -719,7 +748,7 @@ pre {
     z-index: 10;
 
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: -1.25em; /* 20px */
         left: 50%;
@@ -748,7 +777,8 @@ pre {
     }
 }
 
-@media (max-width: 48em) { /* 768px */
+@media (max-width: 48em) {
+    /* 768px */
     .title {
         font-size: 2em;
         left: 1em;
@@ -818,7 +848,8 @@ pre {
     }
 }
 
-@media (max-width: 30em) { /* 480px */
+@media (max-width: 30em) {
+    /* 480px */
     .title {
         font-size: 1.5em;
         left: 1em;
