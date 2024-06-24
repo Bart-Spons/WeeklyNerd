@@ -1,4 +1,3 @@
-
 ## Sprekers
 
 **Marieke** - Onderzoeker Digitaal Toegankelijk
@@ -33,16 +32,17 @@ De WCAG stelt 50 criteria voor, verdeeld over vier hoofdonderwerpen, die ook wel
 
 ### Voorbeelden van WCAG Criteria
 
-- **1.4.2 Audio Control**: Bij geluid langer dan 3 seconden moet er een mogelijkheid zijn deze te pauzeren, stoppen of het volume te verlagen.
-- **2.1.2 No Keyboard Trap**: Het moet mogelijk zijn om met het toetsenbord te navigeren zonder vast te zitten in een element.
-- **2.2.2 Pause, Stop, Hide**: Elementen die automatisch starten en langer dan 4 seconden duren, moeten gepauzeerd, gestopt of verborgen kunnen worden.
-- **2.3.1 Three Flashes or Below Threshold**: Op webpagina's mag geen enkel element 3 keer of meer binnen een seconde flitsen.
+-   **1.4.2 Audio Control**: Bij geluid langer dan 3 seconden moet er een mogelijkheid zijn deze te pauzeren, stoppen of het volume te verlagen.
+-   **2.1.2 No Keyboard Trap**: Het moet mogelijk zijn om met het toetsenbord te navigeren zonder vast te zitten in een element.
+-   **2.2.2 Pause, Stop, Hide**: Elementen die automatisch starten en langer dan 4 seconden duren, moeten gepauzeerd, gestopt of verborgen kunnen worden.
+-   **2.3.1 Three Flashes or Below Threshold**: Op webpagina's mag geen enkel element 3 keer of meer binnen een seconde flitsen.
 
 ## Actiepunten
 
 ### Low Hanging Fruit! P.O.U.R.
 
 Stel jezelf de volgende vragen om de toegankelijkheid van je digitale producten te verbeteren:
+
 1. Kan deze content door iedereen waargenomen worden?
 2. Kan deze content door iedereen bereikt en gebruikt worden?
 3. Kan deze content door iedereen begrepen worden?
@@ -50,7 +50,10 @@ Stel jezelf de volgende vragen om de toegankelijkheid van je digitale producten 
 
 ## Allerbelangrijkste Tips!
 
-- **Test met een schermlezer**: Zet voor MacOS VoiceOver aan en voor Windows NVDA.
-- **Navigeer met een toetsenbord**: Probeer door je website of app te gaan zonder muis.
-- **Test met je doelgroep**: Dit is cruciaal om echte inzichten te krijgen in hoe toegankelijk je product is.
+-   **Test met een schermlezer**: Zet voor MacOS VoiceOver aan en voor Windows NVDA.
+-   **Navigeer met een toetsenbord**: Probeer door je website of app te gaan zonder muis.
+-   **Test met je doelgroep**: Dit is cruciaal om echte inzichten te krijgen in hoe toegankelijk je product is.
 
+## Conclusie
+
+Ik heb heel veel bewondering voor het werk van deze mensen. "Het web moet voor iedereen beschikbaar zijn" vindt ik een sterke uitspraak. Eerst boeide mij dit gebeuren met aria-labels niet zoveel. Na het verhaal van Marieke en Pim gehoord te hebben zal ik hier vaker over gaan nadenken en dit op mijn werk ook ter sprake brengen. Hier doen wij nog niet veel mee bij mij op het werk. Tijd voor verandering!

@@ -42,5 +42,5 @@ Jeffrey moedigt aan om je eigen ecosysteem te creëren waarin je kunt innoveren 
 
 ## Mijn conclusie
 
-Jeffrey's aanpak van webontwikkeling als een combinatie van technische vaardigheden en artistieke expressie is zowel vernieuwend als inspirerend. Zijn nadruk op het gebruik van JavaScript voor zowel frontend als backend ontwikkeling, samen met zijn creatieve projecten, tonen zijn veelzijdigheid en toewijding aan het vak.
+Jeffrey's aanpak van webontwikkeling als een combinatie van technische vaardigheden en artistieke expressie is zowel vernieuwend als inspirerend. Zijn nadruk op het gebruik van JavaScript voor zowel frontend als backend (node) ontwikkeling, samen met zijn creatieve projecten, tonen zijn veelzijdigheid en toewijding aan het vak. Het deel handarbeid waar Jeffrey een grote passie voor heeft sprak mij niet zo aan. Waar ik mij meer in ga verdiepen in GSAP. Hier had ik nog niet van gehoord maar zag er indrukwekkend uit.
 

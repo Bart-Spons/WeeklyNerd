@@ -1,4 +1,3 @@
-
 ## Spreker
 
 Jeremy Keith
@@ -29,28 +28,28 @@ De evolutie van webontwikkeling: van HTML (structuur), naar CSS (stijl), en verv
 
 Waarom een `<button>` in plaats van een `<span>` gebruiken voor knoppen?
 
-- **Control:** Een `<button>` biedt automatische functionaliteit voor toegankelijkheid en interactie, terwijl een `<span>` expliciete scripts vereist om als knop te functioneren.
+-   **Control:** Een `<button>` biedt automatische functionaliteit voor toegankelijkheid en interactie, terwijl een `<span>` expliciete scripts vereist om als knop te functioneren.
 
 ### CSS Tips
 
 ```css
 button {
-  padding-left: padding-inline-start;
-  font-size: clamp(1rem, 0.5rem + 0.6vw, 1.5rem);
-  padding-inline-start: 1em;
+    padding-left: padding-inline-start;
+    font-size: clamp(1rem, 0.5rem + 0.6vw, 1.5rem);
+    padding-inline-start: 1em;
 }
 ```
 
 ## Websites
 
-- [Adactio](https://adactio.com/) - Jeremy's persoonlijke website.
-- [Build Excellent Websites](https://buildexcellentwebsit.es/) - Een bron voor het bouwen van kwalitatief hoogwaardige websites.
+-   [Adactio](https://adactio.com/) - Jeremy's persoonlijke website.
+-   [Build Excellent Websites](https://buildexcellentwebsit.es/) - Een bron voor het bouwen van kwalitatief hoogwaardige websites.
 
 ## Design Systems en System Thinking
 
-- **Design Systems:** Het gaat niet alleen om de output, maar ook om hoe de componenten worden gemaakt.
-- **System Thinking:** Een benadering waarbij je kijkt naar het geheel en niet alleen naar individuele delen.
+-   **Design Systems:** Het gaat niet alleen om de output, maar ook om hoe de componenten worden gemaakt.
+-   **System Thinking:** Een benadering waarbij je kijkt naar het geheel en niet alleen naar individuele delen.
 
 ## Conclusie
 
-Jeremy's benadering van webontwikkeling is diepgaand en innovatief. Zijn filosofie dat "de meer je grip verstrakt, hoe meer het World Wide Web door je vingers glipt" weerspiegelt de noodzaak om flexibel en adaptief te blijven in de technologie en design.
+Jeremy's benadering van webontwikkeling is diepgaand en innovatief. Zijn filosofie dat "de meer je grip verstrakt, hoe meer het World Wide Web door je vingers glipt" weerspiegelt de noodzaak om flexibel en adaptief te blijven in de technologie en design. Het is altijd tof om een legend in ons vakgebied te zien. Wij kennen deze man niet maar toen ik hoorde dat hij er vanaf het begin al op het web zat is dat zeer indrukwekkend. Zijn kleine trukjes heb ik opgescheven (hierboven) en zal ik meenemen naar volgende projecten.
