@@ -1,3 +1,18 @@
+// In this document
+// - Fetch the markdown files from the repository and display them on the website
+// - Load in the markdown files from the repository for the specific nerd
+// - Close the nerd screen
+// - Scroll to the top of the page
+// - Scroll to down the page
+// - Scroll through the top gallery
+// - Scroll through the bottom gallery
+// - Scroll through the nerd screen
+// - Auto scroll 1 time
+// - Transition for the nerd screen
+// - Reflectie bubbles
+// - Best nerd podium fill
+
+// Fetch the markdown files from the repository and display them on the website
 
 import { unified } from 'https://esm.sh/unified@11?bundle';
 import remarkParse from 'https://esm.sh/remark-parse@11?bundle';
@@ -24,7 +39,7 @@ async function main() {
                 const backButton = document.createElement('button');
                 backButton.classList.add('back-button');
                 backButton.textContent = "Terug naar de hoofdpagina";
-                backButton.onclick = closeTestScreen;
+                backButton.onclick = closeNerdScreen;
                 contentDiv.appendChild(backButton);
             })
             .catch(error => console.error(error));
@@ -43,7 +58,10 @@ async function main() {
     loadWeekMarkdown(11, 'weekly-nerd-11');
 }
 
+// Check if it is live
 main().then(() => console.log("live"));
+
+// Load in the markdown files from the repository for the specific nerd
 
 document.querySelectorAll(".gallery-item")[0].addEventListener("click", () => {
     document.startViewTransition(() => {
@@ -111,7 +129,9 @@ document.querySelectorAll(".gallery-item")[10].addEventListener("click", () => {
     });
 });
 
-function closeTestScreen() {
+// Close the nerd screen
+
+function closeNerdScreen() {
     document.getElementById("weekly-nerd").classList.remove("active");
     document.getElementById("weekly-nerd-2").classList.remove("active");
     document.getElementById("weekly-nerd-3").classList.remove("active");
@@ -126,12 +146,16 @@ function closeTestScreen() {
 
 }
 
+// Scroll to the top of the page
+
 gsap.to(".title", {
     y: -200,
     opacity: 0,
     duration: 1,
     delay: 3,
 });
+
+// Scroll to down the page
 
 gsap.to(".scroll-down", {
     y: -220,
@@ -141,6 +165,8 @@ gsap.to(".scroll-down", {
 });
 
 gsap.registerPlugin(ScrollTrigger);
+
+// Scroll through the top gallery
 
 gsap.to(".gallery .gallery-container", {
     x: () =>
@@ -166,6 +192,8 @@ gsap.to(".gallery .gallery-container", {
         },
     },
 });
+
+// Scroll through the bottom gallery
 
 gsap.to(".gallery-bottom .gallery-container", {
     x: () =>
@@ -204,6 +232,8 @@ gsap.to(".gallery-item", {
     },
 });
 
+// Scroll through the nerd screen
+
 function smoothScrollByY(targetY, duration) {
     const start = window.pageYOffset;
     const change = targetY - start;
@@ -221,8 +251,10 @@ function smoothScrollByY(targetY, duration) {
     requestAnimationFrame(animateScroll);
 }
 
+// Auto scroll 1 time
+
 function autoScroll() {
-    // smoothScrollByY(window.pageYOffset + (2.4 * window.innerHeight), 6000);
+    smoothScrollByY(window.pageYOffset + (2.4 * window.innerHeight), 6000);
 }
 
 setTimeout(autoScroll, 7000);
@@ -239,12 +271,16 @@ checkbox.addEventListener('change', function () {
     }
 });
 
+// transition for the nerd screen
+
 let trans = () => {
     document.documentElement.classList.add('transition');
     window.setTimeout(() => {
         document.documentElement.classList.remove('transition');
     }, 1000);
 };
+
+// Reflectie bubbles
 
 document.addEventListener("DOMContentLoaded", function () {
     const container = document.getElementById("vakkenReflectie");
@@ -270,6 +306,8 @@ document.addEventListener("DOMContentLoaded", function () {
         container.appendChild(bubble);
     });
 });
+
+// Best nerd podium fill
 
 window.addEventListener('scroll', function () {
     const section = document.querySelector('.nerd2');
