@@ -408,6 +408,11 @@ a {
     }
 }
 
+iframe{
+    width: 500px;
+    height: 500px;
+}
+
 .live-example {
     margin-top: 1.25em;
     text-align: center;
@@ -738,6 +743,24 @@ pre {
     }
 }
 
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .nerd2 .podium {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nerd2 .place {
+        width: 100%;
+        max-width: 20em; /* Optional: Set a max width for the elements */
+        margin-bottom: 1.25em;
+    }
+
+    .nerd2 .place:first-child {
+        margin-bottom: 0;
+    }
+}
+
 /* Polypane section */
 
 .polypane {
@@ -835,6 +858,11 @@ footer {
         top: 2em;
     }
 
+    iframe{
+        width: 300px;
+        height: 300px;
+    }
+
     .scroll-down {
         font-size: 2em;
         left: 1em;
@@ -904,6 +932,11 @@ footer {
         font-size: 1.5em;
         left: 1em;
         top: 1em;
+    }
+
+    iframe{
+        width: 200px;
+        height: 200px;
     }
 
     .scroll-down {
