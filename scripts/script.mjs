@@ -346,4 +346,13 @@ window.addEventListener('scroll', function () {
     }
 });
 
+// When darkmode is actived, change image
+document.getElementById('switch').addEventListener('click', function () {
+    const galleryItem = document.querySelector('.marieke');
+    if (this.checked) {
+        galleryItem.style.backgroundImage = 'url("../nerds/marieke3.png")';
+    } else {
+        galleryItem.style.backgroundImage = 'url("../nerds/marieke2.png")';
+    }
+});
 
