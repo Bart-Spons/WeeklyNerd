@@ -11,7 +11,7 @@ Waag Futurelab in Amsterdam richt zich op de interactie tussen kunst, wetenschap
 - Educatie en Leren: Aanbieden van educatieve programma's en middelen voor vaardigheden en kennis over technologie en samenleving.
 
 ## Wat hebben we gedaan?
-De mensen van Waag hebben nos gebruikt voor eigen onderzoek.
+De mensen van Waag hebben ons gebruikt voor eigen onderzoek.
 
 ## Wat neem ik mee hieruit (conclusie)
 Helemaal niks, volgend jaar graag een informatieve weekly nerd. Andere jaren was Vitaly Friedman wel eens als spreker. Dit was naar mijn mening een veel betere keuze geweest.

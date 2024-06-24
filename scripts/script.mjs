@@ -136,6 +136,8 @@ document.querySelectorAll(".gallery-item")[11].addEventListener("click", () => {
     });
 });
 
+
+
 // Close the nerd screen
 
 function closeNerdScreen() {
@@ -191,13 +193,13 @@ gsap.to(".gallery .gallery-container", {
         scrub: true,
         pin: true,
         onUpdate: (self) => {
-            const progress = Math.floor(self.progress * 12);
+            const progress = Math.floor(self.progress * 13);
             document.getElementById(
                 "progress-bar-1"
             ).style.height = `${self.progress * 100}%`;
             document.getElementById(
                 "progress-label-1"
-            ).textContent = `${progress} / 12`;
+            ).textContent = `${progress} / 13`;
         },
     },
 });
