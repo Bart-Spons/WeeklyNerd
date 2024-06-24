@@ -101,7 +101,8 @@ html {
         .weekly-nerd-8,
         .weekly-nerd-9,
         .weekly-nerd-10,
-        .weekly-nerd-11 {
+        .weekly-nerd-11,
+        .weekly-nerd-12 {
             background-color: var(--darkSectionBg);
 
             li {
@@ -487,7 +488,8 @@ iframe{
 .weekly-nerd-8,
 .weekly-nerd-9,
 .weekly-nerd-10,
-.weekly-nerd-11 {
+.weekly-nerd-11,
+.weekly-nerd-12 {
     display: none;
     position: fixed;
     top: 0;
@@ -823,6 +825,39 @@ pre {
     }
 }
 
+.vakkenReflectie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25em;
+}
+
+.bubble {
+    width: calc(33.33% - 5em); /* Voor drie bubbels per rij, met ruimte ertussen */
+    height: auto;
+    aspect-ratio: 1; /* Houdt de bubbels vierkant */
+    margin-bottom: 1.25em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--lightColor);
+    padding: 0.625em;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+
+
+.speech-bubble {
+    width: 15.625em;
+}
+
+
+
 /* Footer */
 
 footer {
@@ -856,6 +891,11 @@ footer {
         font-size: 2em;
         left: 1em;
         top: 2em;
+    }
+
+    .vakkenReflectie .bubble {
+        width: calc(50% - 1.25em); /* Twee bubbels per rij op tablets */
+        height: auto;
     }
 
     iframe{
@@ -910,7 +950,7 @@ footer {
         }
     }
 
-    .vakkenReflectie {
+    /* .vakkenReflectie {
         flex-direction: column;
         align-items: center;
     }
@@ -923,7 +963,8 @@ footer {
 
     .speech-bubble {
         width: 15.625em;
-    }
+        height: 15.625em;
+    } */
 }
 
 @media (max-width: 30em) {
@@ -935,8 +976,8 @@ footer {
     }
 
     iframe{
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
     }
 
     .scroll-down {
@@ -987,7 +1028,7 @@ footer {
         }
     }
 
-    .vakkenReflectie {
+    /* .vakkenReflectie {
         flex-direction: column;
         align-items: center;
     }
@@ -1000,5 +1041,5 @@ footer {
 
     .speech-bubble {
         width: 12.5em; 
-    }
+    } */
 }

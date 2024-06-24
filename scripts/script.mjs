@@ -56,6 +56,7 @@ async function main() {
     loadWeekMarkdown(9, 'weekly-nerd-9');
     loadWeekMarkdown(10, 'weekly-nerd-10');
     loadWeekMarkdown(11, 'weekly-nerd-11');
+    loadWeekMarkdown(12, 'weekly-nerd-12');
 }
 
 // Check if it is live
@@ -129,6 +130,12 @@ document.querySelectorAll(".gallery-item")[10].addEventListener("click", () => {
     });
 });
 
+document.querySelectorAll(".gallery-item")[11].addEventListener("click", () => {
+    document.startViewTransition(() => {
+        document.getElementById("weekly-nerd-12").classList.add("active");
+    });
+});
+
 // Close the nerd screen
 
 function closeNerdScreen() {
@@ -143,6 +150,8 @@ function closeNerdScreen() {
     document.getElementById("weekly-nerd-9").classList.remove("active");
     document.getElementById("weekly-nerd-10").classList.remove("active");
     document.getElementById("weekly-nerd-11").classList.remove("active");
+    document.getElementById("weekly-nerd-12").classList.remove("active");
+
 
 }
 
@@ -299,13 +308,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const bubble = document.createElement("div");
         bubble.className = "bubble";
         bubble.innerHTML = `<p><strong>${bubbleContent.title}</strong></p><p>${bubbleContent.text}</p>`;
-        bubble.style.left = `${(index % 3) * 33 + 10}%`;  // Spreading bubbles horizontally
-        bubble.style.top = `${Math.floor(index / 3) * 35 + 10}%`;  // Spreading bubbles vertically
         bubble.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
         bubble.style.animation = `move ${Math.random() * 5 + 3}s ease-in-out infinite`;
         container.appendChild(bubble);
     });
 });
+
 
 // Best nerd podium fill
 
